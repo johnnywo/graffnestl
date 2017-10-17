@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Lawyer
+
+# Model Form Field configuration
+form: $/milo/lawyer/models/lawyer/fields.yaml
+
+# Model Class name
+modelClass: Milo\Lawyer\Models\Lawyer
+
+# Default redirect location
+defaultRedirect: milo/lawyer/lawyers
+
+# Create page
+create:
+    title: Create Lawyer
+    redirect: milo/lawyer/lawyers/update/:id
+    redirectClose: milo/lawyer/lawyers
+
+# Update page
+update:
+    title: Edit Lawyer
+    redirect: milo/lawyer/lawyers
+    redirectClose: milo/lawyer/lawyers
+
+# Preview page
+preview:
+    title: Preview Lawyer

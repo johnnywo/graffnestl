@@ -1,0 +1,51 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    photo:
+        label: Foto
+        type: fileupload
+        mode: image
+        imageHeight: 260
+        imageWidth: 260
+    name:
+        label: Name
+        span: left
+    title:
+        label: Titel
+        span: right
+    jobtitle:
+        label: Job Titel
+        span: left
+    address:
+        label: Adresse
+        span: left
+    phone:
+        label: Telefon
+        span: left
+    fax:
+        label: Fax
+        span: right
+    email:
+        label: E-Mail
+        span: left
+    mobil:
+        label: Mobil
+        span: right
+    relation:
+        label: Beziehung zur Kanzlei
+    focus:
+        label: Schwerpunkte
+        type: textarea
+        size: large
+    experience:
+        label: Erfahrung
+        type: textarea
+        size: large
+    education:
+        label: Ausbildung
+        type: textarea
+        size: large
+    languages:
+        label: Sprachen

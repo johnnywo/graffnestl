@@ -1,0 +1,4 @@
+1.0.1: 
+  - First version of Lawyer with DB Migration
+  - create_lawyers_table.php
+
