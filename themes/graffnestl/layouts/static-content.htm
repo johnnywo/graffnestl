@@ -1,0 +1,90 @@
+description = "Static Content"
+
+[localePicker]
+[staticPage]
+[staticMenu]
+code = "main-menu"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Graff Nestl & Partner Rechtsanwälte - {{ this.page.title }}</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Graff Nestl & Partner Rechtsanwälte">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="OctoberCMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/graffnestl.png'|theme }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+        <link href="{{ [
+            'assets/css/vendor.css',
+            'assets/css/theme.css',
+            'assets/css/graffnestl.css'
+            ]|theme }}" rel="stylesheet"> 
+        {% styles %}
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'site/header' %}
+        </header>
+
+        <!-- Content -->
+        <section id="layout-content">
+
+            <div class="container">
+
+                <div class="row">
+                            
+                    <div class="col-sm-8-5 col-sm-offset-1-5">
+
+                        <div class="page-header text-center">
+                            <h1 class="page-title">{{ this.page.title }}</h1>
+                        </div>
+
+                         <div class="row">
+                             <div class="col-sm-6">
+                                {% if (this.page.title == 'Fachgebiete') or 
+                                        (this.page.title == 'Area') %}
+                                    <img src="{{ 'assets/images/fachgebiete_GNBX-0253.jpg'|theme }}" alt="Fachgebiete Graff Nestl & Partner Rechtsanwälte" class="img-responsive oc-img-bordered">
+                                    <br>
+                                {% endif %}
+                                {% if this.page.title == 'Kanzlei' %}
+                                    <img src="{{ 'assets/images/kanzlei_GNBX-0306.jpg'|theme }}" alt="Kanzlei Graff Nestl & Partner Rechtsanwälte" class="img-responsive oc-img-bordered">
+                                    <br>
+                                {% endif %}
+                                {% placeholder col_one title="Linke Spalte" type="html" %}
+                             </div>
+                             <div class="col-sm-6">
+                                 {% placeholder col_two title="Rechte Spalte" type="html" %}
+                             </div>
+                         </div>
+                        
+                        {% page %}
+
+                        <!-- Footer -->
+                        <footer id="layout-footer">
+                            {% partial 'site/footer' %}
+                        </footer>
+    
+                    </div>
+            
+                </div>
+
+            </div>
+            
+        </section>
+
+        <!-- Scripts -->
+        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>

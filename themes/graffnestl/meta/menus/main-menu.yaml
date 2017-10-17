@@ -1,0 +1,39 @@
+name: 'Main Menu'
+items:
+    -
+        title: Fachgebiete
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: fachgebiete
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Kanzlei
+        nesting: '0'
+        type: static-page
+        url: ''
+        code: ''
+        reference: kanzlei
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Kooperationen
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: kooperationen
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
