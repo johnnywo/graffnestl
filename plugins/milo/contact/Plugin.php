@@ -1,10 +1,11 @@
-<?php namespace Milo\Lawyer;
+<?php namespace Milo\Contact;
 
 use Backend;
 use System\Classes\PluginBase;
+use Event;
 
 /**
- * Lawyer Plugin Information File
+ * Contact Plugin Information File
  */
 class Plugin extends PluginBase
 {
@@ -16,7 +17,7 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'Lawyer',
+            'name'        => 'Contact',
             'description' => 'No description provided yet...',
             'author'      => 'Milo',
             'icon'        => 'icon-leaf'
@@ -52,8 +53,7 @@ class Plugin extends PluginBase
     {
 
         return [
-            'Milo\Lawyer\Components\Lawyers' => 'lawyers',
-            'Milo\Lawyer\Components\Lawyer' => 'lawyer',
+            'Milo\Contact\Components\ContactForm' => 'contactForm',
         ];
     }
 
@@ -67,8 +67,8 @@ class Plugin extends PluginBase
         return []; // Remove this line to activate
 
         return [
-            'milo.lawyer.some_permission' => [
-                'tab' => 'Lawyer',
+            'milo.contact.some_permission' => [
+                'tab' => 'Contact',
                 'label' => 'Some permission'
             ],
         ];
@@ -81,13 +81,12 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
-
         return [
-            'lawyer' => [
-                'label'       => 'Lawyer',
-                'url'         => Backend::url('milo/lawyer/lawyers'),
-                'icon'        => 'icon-leaf',
-                'permissions' => ['milo.lawyer.*'],
+            'contact' => [
+                'label'       => 'Contact',
+                'url'         => Backend::url('milo/contact/contacts'),
+                'icon'        => 'icon-envelope',
+                'permissions' => ['milo.contact.*'],
                 'order'       => 500,
             ],
         ];

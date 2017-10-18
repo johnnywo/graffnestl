@@ -48,3 +48,12 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+    -
+        title: 'Kontakt'
+        type: cms-page
+        code: ''
+        reference: kontakt
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'

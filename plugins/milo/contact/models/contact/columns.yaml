@@ -1,0 +1,19 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    created_at:
+        label: Datum
+        searchable: true
+    name: 
+        label: Name
+        searchable: true
+    email:
+        label: E-Mail
+        searchable: true
+    subject:
+        label: Betreff
+    message:
+        label: Nachricht
+        searchable: true

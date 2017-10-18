@@ -2,10 +2,10 @@ title = "Anwälte & Juristen"
 url = "/anwaelte/:slug"
 layout = "default"
 
+[lawyer]
 [lawyers]
 ==
 
-{% set lawyer = lawyers.lawyer %}
 
 <div class="page-header text-center">
     <h1 class="page-title m-b-0">{{ lawyer.name }}</h1>
@@ -16,9 +16,9 @@ layout = "default"
     <!-- Side Menu -->
     <div class="col-sm-3">
         <ul class="list-unstyled">
-            {% for menuitem in lawyers.lawyers %}
+            {% for menuitem in lawyers %}
                 <li>
-                    {{ menuitem.name }} <br>
+                    <a href="/anwaelte/{{ menuitem.slug }}" class="a-blue">{{ menuitem.name }}</a> <br>
                     <span class="grey fs-13"><i>{{ menuitem.title }}</i></span>
                 </li> 
             {% endfor %}        
@@ -38,7 +38,7 @@ layout = "default"
             {% if lawyer.mobil %}
             M: {{ lawyer.mobil }} <br>
             {% endif %}
-            <a href="mailto: {{ html_email(lawyer.email)|raw }}">{{ 'Senden Sie mir eine E-Mail'|_ }}</a>
+            E: <a href="mailto: {{ html_email(lawyer.email)|raw }}">{{ lawyer.email }}</a>
         </p>
         <p><i>{{ lawyer.relation }}</i></p>
 

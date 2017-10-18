@@ -2,6 +2,7 @@
 
 use Cms\Classes\ComponentBase;
 use Milo\Lawyer\Models\Lawyer;
+use Redirect;
 
 class Lawyers extends ComponentBase
 {
@@ -18,6 +19,11 @@ class Lawyers extends ComponentBase
         return [];
     }
 
+    public function onRun()
+    {
+        $this->page['lawyers'] = $this->lawyers();
+    }
+
     public function lawyers()
     {
         $lawyers = Lawyer::all();
@@ -25,12 +31,4 @@ class Lawyers extends ComponentBase
         return $lawyers;
     }
 
-    public function lawyer()
-    {
-        // dd($this->param('slug'));
-        $slug = $this->param('slug');
-        $lawyer = Lawyer::where('slug', $slug)->first();
-
-        return $lawyer;   
-    }
 }

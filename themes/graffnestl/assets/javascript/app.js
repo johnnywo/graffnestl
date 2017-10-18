@@ -49,4 +49,7 @@ jQuery(document).ready(function($){
     $('.page-title').html(function(i,el) {
         return el.replace(/\b([A-Z])/g, "<span class=\"first-letter\">$1</span>");
     });
+
+    // show uploaded file on contact form
+    $('#file-upload').bind('change', function() { var fileName = ''; fileName = $(this).val(); $('#file-selected').html(fileName); })
 });
