@@ -15,21 +15,27 @@ fields:
     title:
         label: Titel
         span: right
+        default: 'Dr. Jur.'
     jobtitle:
         label: Job Titel
         span: left
+        default: 'Rechtsanwältin'
     address:
         label: Adresse
         span: left
+        default: 'Kärntner Ring 4, A-1010 Wien'
     phone:
         label: Telefon
         span: left
+        default: '+43 1 533 66 61-0'
     fax:
         label: Fax
         span: right
+        default: '+43 1 533 66 61-10'
     email:
         label: E-Mail
         span: left
+        default: 'office@graffnestl.com'
     mobil:
         label: Mobil
         span: right

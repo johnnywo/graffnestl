@@ -14,10 +14,10 @@ class CreateLawyersTable extends Migration
             $table->string('name');
             $table->string('title');
             $table->string('jobtitle');
-            $table->string('address');
-            $table->string('phone');
+            $table->string('address')->default('Kärntner Ring 4, A-1010 Wien');
+            $table->string('phone')->default('+43 1 533 66 61-0');
             $table->string('mobil');
-            $table->string('fax');
+            $table->string('fax')->default('+43 1 533 66 61-10');
             $table->string('email');
             $table->string('relation');
             $table->text('focus_short');
