@@ -14,6 +14,15 @@ items:
             cssClass: ''
             isExternal: '0'
     -
+        title: 'Anwälte & Juristen'
+        type: cms-page
+        code: ''
+        reference: anwaelte
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
         title: Kanzlei
         nesting: '0'
         type: static-page
@@ -30,8 +39,10 @@ items:
         title: Kooperationen
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: kooperationen
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'

@@ -7,10 +7,17 @@ use Model;
  */
 class Lawyer extends Model
 {
+    use \October\Rain\Database\Traits\Sluggable;
+
     /**
      * @var string The database table used by the model.
      */
     public $table = 'milo_lawyer_lawyers';
+
+    /**
+     * @var array Generate slugs for these attributes.
+     */
+    protected $slugs = ['slug' => 'name'];
 
     /**
      * Softly implement the TranslatableModel behavior.
@@ -20,9 +27,7 @@ class Lawyer extends Model
     /**
      * @var array Attributes that support translation, if available.
      */
-    public $translatable = ['title', 'jobtitle', 'address', 'relation', 'focus', 'experience', 'education', 'languages'];
-
-
+    public $translatable = ['title', 'jobtitle', 'address', 'relation', 'focus', 'focus_short', 'experience', 'education', 'languages'];
 
     /**
      * @var array Guarded fields
@@ -42,7 +47,8 @@ class Lawyer extends Model
         'fax',
         'email', 
         'relation', 
-        'focus', 
+        'focus',
+        'focus_short', 
         'experience', 
         'education', 
         'languages'

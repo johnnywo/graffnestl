@@ -20,10 +20,12 @@ class CreateLawyersTable extends Migration
             $table->string('fax');
             $table->string('email');
             $table->string('relation');
+            $table->text('focus_short');
             $table->text('focus');
             $table->text('experience');
             $table->text('education');
             $table->string('languages');
+            $table->string('slug');
             $table->timestamps();
         });
     }

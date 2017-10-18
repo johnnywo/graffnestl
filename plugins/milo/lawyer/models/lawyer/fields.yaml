@@ -7,8 +7,8 @@ fields:
         label: Foto
         type: fileupload
         mode: image
-        imageHeight: 260
-        imageWidth: 260
+        imageHeight: 180
+        imageWidth: 120
     name:
         label: Name
         span: left
@@ -37,15 +37,23 @@ fields:
         label: Beziehung zur Kanzlei
     focus:
         label: Schwerpunkte
-        type: textarea
+        type: richeditor
+        toolbarButtons: bold|italic
+        size: huge
+    focus_short:
+        label: Schwerpunkt für Teaser
+        type: richeditor
+        toolbarButtons: formatUL
         size: large
     experience:
         label: Erfahrung
-        type: textarea
-        size: large
+        type: richeditor
+        toolbarButtons: bold|italic
+        size: huge
     education:
         label: Ausbildung
-        type: textarea
-        size: large
+        type: richeditor
+        toolbarButtons: bold|italic
+        size: huge
     languages:
         label: Sprachen

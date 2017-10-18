@@ -1,0 +1,58 @@
+title = "Anwälte & Juristen"
+url = "/anwaelte/:slug"
+layout = "default"
+
+[lawyers]
+==
+
+{% set lawyer = lawyers.lawyer %}
+
+<div class="page-header text-center">
+    <h1 class="page-title m-b-0">{{ lawyer.name }}</h1>
+    <div class="subtitle grey"><i>{{ lawyer.jobtitle }} | {{ lawyer.title }}</i></div>
+</div>
+
+<div class="row">
+    <!-- Side Menu -->
+    <div class="col-sm-3">
+        <ul class="list-unstyled">
+            {% for menuitem in lawyers.lawyers %}
+                <li>
+                    {{ menuitem.name }} <br>
+                    <span class="grey fs-13"><i>{{ menuitem.title }}</i></span>
+                </li> 
+            {% endfor %}        
+        </ul>
+    </div> <!-- End Side Menu -->
+
+	{% if lawyer.photo %}
+    <div class="col-sm-2">
+		<img src="{{ lawyer.photo.getThumb(122, auto) }}" alt="{{ lawyer.title }} {{ lawyer.name }}" class="img-responsive m-b-sm">
+    </div>
+	{% endif %}
+    <div class="col-sm-7">
+        <p>{{ lawyer.address }}</p>
+        <p>
+            T: {{ lawyer.phone }} <br>
+            F: {{ lawyer.fax }} <br>
+            {% if lawyer.mobil %}
+            M: {{ lawyer.mobil }} <br>
+            {% endif %}
+            <a href="mailto: {{ html_email(lawyer.email)|raw }}">{{ 'Senden Sie mir eine E-Mail'|_ }}</a>
+        </p>
+        <p><i>{{ lawyer.relation }}</i></p>
+
+        <p class="p-t-md"><b>{{ 'Schwerpunkte'|_ }} </b></p>
+        <p>{{ lawyer.focus|raw }}</p>
+
+        <p class="p-t-md"><b>{{ 'Professionelle Erfahrung'|_ }}</b></p>
+        <p>{{ lawyer.experience|raw }}</p>
+
+        <p class="p-t-md"><b>{{ 'Ausbildung'|_ }}</b></p>
+        <p>{{ lawyer.education|raw }}</p>
+
+        <p class="p-t-md"><b>{{ 'Sprachen'|_ }}</b></p>
+        <p>{{ lawyer.languages }}</p>
+    </div>
+
+</div>

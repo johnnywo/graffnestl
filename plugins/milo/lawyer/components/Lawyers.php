@@ -24,4 +24,13 @@ class Lawyers extends ComponentBase
 
         return $lawyers;
     }
+
+    public function lawyer()
+    {
+        // dd($this->param('slug'));
+        $slug = $this->param('slug');
+        $lawyer = Lawyer::where('slug', $slug)->first();
+
+        return $lawyer;   
+    }
 }

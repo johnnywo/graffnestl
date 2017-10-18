@@ -38,22 +38,6 @@ code = "main-menu"
                 <div class="row">
                             
                     <div class="col-sm-8-5 col-sm-offset-1-5">
-    
-                        <!-- Start Language Picker -->
-                        <div class="language">
-
-                            <h3>{{ 'Bitte wählen Sie Ihre Sprache:'|_ }}</h3>
-
-                                 {{ form_open() }}
-                                     <select name="locale" data-request="onSwitchLocale" class="selectpicker">
-                                         {% for code, name in locales %}
-                                             <option value="{{ code }}" {{ code == activeLocale ? 'selected' }}>{{ code|upper }}</option>
-                                         {% endfor %}
-                                     </select>
-         
-                                 {{ form_close() }}
-
-                         </div> <!-- End Language Picker -->
                         
                         {% page %}
 

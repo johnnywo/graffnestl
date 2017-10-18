@@ -68,6 +68,11 @@ a {
 	color: #9EA0BF;
 }
 
+a:hover, a:focus {
+    color: #1C216C;
+    text-decoration: underline;
+}
+
 hr {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -125,4 +130,26 @@ h1.page-title .first-letter {
 	    padding-top: 5px;
 	    padding-bottom: 5px;
 	}
+}
+
+div.list-unstyled ul {
+	list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+div.list-unstyled ul li {
+	margin: 10px 0;
+}
+
+.grey {
+	color: #9EA0BF;
+}
+
+.fs-12{
+	font-size: 12px;
+}
+
+.fs-13{
+	font-size: 13px;
 }

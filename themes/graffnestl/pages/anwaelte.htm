@@ -1,18 +1,29 @@
-title = "Anwälte"
+title = "Anwälte & Juristen"
 url = "/anwaelte"
 layout = "default"
 
 [lawyers]
 ==
 
-<div class="page-header">
-    <h1>Anwälte </h1>
+<div class="page-header text-center">
+    <h1 class="page-title">{{ this.page.title }}</h1>
 </div>
 
 <div class="row">
-    <div class="col-sm-6">
         {% for lawyer in lawyers.lawyers %}
-            {{ lawyer.jobtitle }}
+        <div class="col-sm-2 fs-13">
+        	{% if lawyer.photo %}
+       			<a href="/anwaelte/{{ lawyer.slug }}">
+       				<img src="{{ lawyer.photo.getThumb(122, auto) }}" alt="{{ lawyer.title }} {{ lawyer.name }}" class="img-responsive m-b-sm">
+       			</a>
+        	{% endif %}
+            <span class="grey"><i>{{ lawyer.jobtitle }}</i></span> <br>
+            {{ lawyer.name }} <br>
+            <span class="grey"><i>{{ lawyer.title }}</i></span> <br>
+            <div class="list-unstyled fs-12">
+            	{{ lawyer.focus_short|raw }}
+            </div>
+            
+        </div>
         {% endfor %}
-    </div>
 </div>
