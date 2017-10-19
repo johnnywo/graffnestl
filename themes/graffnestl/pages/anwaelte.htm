@@ -11,19 +11,49 @@ layout = "default"
 
 <div class="row">
         {% for lawyer in lawyers %}
-        <div class="col-sm-2 fs-13">
+        <div class="col-sm-2 fs-13 b-right">
         	{% if lawyer.photo %}
        			<a href="/anwaelte/{{ lawyer.slug }}">
-       				<img src="{{ lawyer.photo.getThumb(122, auto) }}" alt="{{ lawyer.title }} {{ lawyer.name }}" class="img-responsive m-b-sm">
+       				<img src="{{ lawyer.photo.getThumb(122,170,{'mode':'crop'}) }}" alt="{{ lawyer.title }} {{ lawyer.name }}" class="img-responsive m-b-sm">
        			</a>
         	{% endif %}
-            <span class="grey"><i>{{ lawyer.jobtitle }}</i></span> <br>
-            {{ lawyer.name }} <br>
-            <span class="grey"><i>{{ lawyer.title }}</i></span> <br>
+
+            <div class="lawyer-name-block">
+            	<span class="grey"><i>{{ lawyer.jobtitle }}</i></span> <br>
+                <a href="/anwaelte/{{ lawyer.slug }}" class="a-blue">{{ lawyer.name }}</a> <br>
+                <span class="grey"><i>{{ lawyer.title }}</i></span>
+            </div>
             <div class="list-unstyled fs-12">
             	{{ lawyer.focus_short|raw }}
             </div>
             
         </div>
         {% endfor %}
+
+        <div class="col-sm-12">
+        	<hr>
+        	<p>
+        		<b>Kooperationspartner in Österreich</b> <br>
+				Rechtsanwalt <br>
+				Mag. Ernst Ehringfeld <br>
+				Hauptplatz 20 <br>
+				A-2460 Bruck an der Leitha
+			</p>
+
+			<p>
+				<b>Kooperationspartner in Italien</b> <br>
+				Rechtsanwältin <br>
+				Mag. Patrizia Raj <br>
+				I-20123 Milano
+			</p>
+
+			<p>
+				<b>Kooperationspartner in Kroatien</b> <br>
+				Rechtsanwältin <br>
+				Sandra Budimir LL.M. <br>
+				Petrinjska 32a <br>
+				HR-10 000 Zagreb
+			</p>
+        	
+        </div>
 </div>

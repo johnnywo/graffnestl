@@ -84,9 +84,9 @@ class Plugin extends PluginBase
 
         return [
             'lawyer' => [
-                'label'       => 'Lawyer',
+                'label'       => 'Anwälte',
                 'url'         => Backend::url('milo/lawyer/lawyers'),
-                'icon'        => 'icon-leaf',
+                'icon'        => 'icon-graduation-cap',
                 'permissions' => ['milo.lawyer.*'],
                 'order'       => 500,
             ],

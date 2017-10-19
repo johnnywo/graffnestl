@@ -242,3 +242,11 @@ legend {
     padding: 6px 12px;
     cursor: pointer;
 }
+
+.b-right {
+    border-right: 1px solid #f2f2f9;
+}
+
+.lawyer-name-block {
+    min-height: 100px;
+}

@@ -27,7 +27,7 @@ layout = "default"
 
 	{% if lawyer.photo %}
     <div class="col-sm-2">
-		<img src="{{ lawyer.photo.getThumb(122, auto) }}" alt="{{ lawyer.title }} {{ lawyer.name }}" class="img-responsive m-b-sm">
+		<img src="{{ lawyer.photo.getThumb(122,170,{'mode':'crop'}) }}" alt="{{ lawyer.title }} {{ lawyer.name }}" class="img-responsive m-b-sm">
     </div>
 	{% endif %}
     <div class="col-sm-7">
