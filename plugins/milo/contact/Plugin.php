@@ -64,12 +64,10 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
-
         return [
             'milo.contact.some_permission' => [
-                'tab' => 'Contact',
-                'label' => 'Some permission'
+                'tab' => 'Nachrichten',
+                'label' => 'Nachrichten ansehen und löschen.'
             ],
         ];
     }
@@ -83,7 +81,7 @@ class Plugin extends PluginBase
     {
         return [
             'contact' => [
-                'label'       => 'Contact',
+                'label'       => 'Nachrichten',
                 'url'         => Backend::url('milo/contact/contacts'),
                 'icon'        => 'icon-envelope',
                 'permissions' => ['milo.contact.*'],

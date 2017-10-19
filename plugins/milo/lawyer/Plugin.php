@@ -64,12 +64,10 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
-
         return [
             'milo.lawyer.some_permission' => [
-                'tab' => 'Lawyer',
-                'label' => 'Some permission'
+                'tab' => 'Anwälte',
+                'label' => 'Anwälte anlegen und bearbeiten.'
             ],
         ];
     }

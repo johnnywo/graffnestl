@@ -1,20 +1,6 @@
 <!-- Nav -->
-<!-- Start Language Picker -->
-<div class="language pull-right">
-
-         {{ form_open() }}
-             <select name="locale" data-request="onSwitchLocale" class="selectpicker">
-                 {% for code, name in locales %}
-                     <option value="{{ code }}" {{ code == activeLocale ? 'selected' }}>{{ code|upper }}</option>
-                 {% endfor %}
-             </select>
-
-         {{ form_close() }}
-
- </div> <!-- End Language Picker -->
-
-<nav id="layout-nav" class="navbar navbar-autohide" role="navigation">
-    <div class="container">
+<nav id="layout-nav" class="navbar navbar-autohide m-t-md" role="navigation">
+    <!-- <div class="container"> -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -22,33 +8,63 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            {# <a class="navbar-brand" href="{{ 'home'|page }}">October Demo</a> #}
+            <a class="navbar-brand text-center img-center" href="{{ 'home'|page }}">
+                <img src="{{ 'assets/images/graffnestl-logo-small.png'|theme }}" alt="Graff Nestl & Partner Rechtsanwälte" class="img-responsive hidden-xs">
+                <img src="{{ 'assets/images/graffnestl-logo-small_257px.png'|theme }}" alt="Graff Nestl & Partner Rechtsanwälte" class="img-responsive hidden-sm hidden-md hidden-lg">
+            </a>
+            <!-- Start Language Picker -->
+            <div class="language pull-right hidden-xs">
+
+                     {{ form_open() }}
+                         <select name="locale" data-request="onSwitchLocale" class="selectpicker">
+                             {% for code, name in locales %}
+                                 <option value="{{ code }}" {{ code == activeLocale ? 'selected' }}>{{ code|upper }}</option>
+                             {% endfor %}
+                         </select>
+
+                     {{ form_close() }}
+
+             </div> <!-- End Language Picker -->
         </div>
         <div class="collapse navbar-collapse navbar-main-collapse">
             {% if staticMenu.menuItems %}
-                <ul class="nav navbar-nav">
-                    {% for item in menuItems if not item.viewBag.isHidden %}
-                        <li role="presentation" class="{{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }} {{ item.viewBag.cssClass }}">
-                            {% if item.url %}
-                                <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
-                                    {{ item.title|_ }}
-                                </a>
-                            {% else %}
-                                <span>{{ item.title|_ }}</span>
-                            {% endif %}
+            <div class="row">
+                <div class="col-sm-12 nav-graffnestl">
+                    <ul class="nav navbar-nav">
+                        {% for item in menuItems if not item.viewBag.isHidden %}
+                            <li role="presentation" class="{{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }} {{ item.viewBag.cssClass }}">
+                                {% if item.url %}
+                                    <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
+                                        {{ item.title|_ }}
+                                    </a>
+                                {% else %}
+                                    <span>{{ item.title|_ }}</span>
+                                {% endif %}
 
-                            {% if item.items %}
-                                <ul>{% partial __SELF__ ~ "::items" items=item.items %}</ul>
-                            {% endif %}
-                        </li>
-                    {% endfor %}
-                </ul>
+                                {% if item.items %}
+                                    <ul>{% partial __SELF__ ~ "::items" items=item.items %}</ul>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    <!-- Start Language Picker -->
+                    <div class="language hidden-sm hidden-md hidden-lg">
+
+                             {{ form_open() }}
+                                 <select name="locale" data-request="onSwitchLocale" class="selectpicker">
+                                     {% for code, name in locales %}
+                                         <option value="{{ code }}" {{ code == activeLocale ? 'selected' }}>{{ code|upper }}</option>
+                                     {% endfor %}
+                                 </select>
+
+                             {{ form_close() }}
+
+                     </div> <!-- End Language Picker -->
+                </div>
+            </div>
+
             {% endif %}
-            {# <ul class="nav navbar-nav">
-                <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Basic concepts</a></li>
-                <li class="{% if this.page.id == 'ajax' %}active{% endif %}"><a href="{{ 'ajax'|page }}">AJAX framework</a></li>
-                <li class="{% if this.page.id == 'plugins' %}active{% endif %}"><a href="{{ 'plugins'|page }}">Plugin components</a></li>
-            </ul> #}
+            
         </div>
-    </div>
+    <!-- </div> -->
 </nav>

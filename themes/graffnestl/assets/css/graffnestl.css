@@ -11,7 +11,7 @@ body, p, h1, h2, h3, h4, h5, h6 {
 	color: #1C216C;
 }
 
-#layout-content > .container {
+.site-container {
     background: white;
     -webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
     -moz-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
@@ -86,7 +86,10 @@ hr {
 
 .page-header {
     padding-bottom: 11.5px;
-    margin: 50px 0 25px;
+    margin-top: 25px;
+    margin-right: 0px;
+    margin-bottom: 25px;
+    margin-left: 0px;
     border-bottom: 1px solid #F1F1F7;
 }
 
@@ -149,10 +152,82 @@ h1.page-title .first-letter {
 	font-size: 140%;
 }
 
+.navbar {
+    position: relative;
+    min-height: inherit;
+    margin-bottom: 0;
+    border: 1px solid transparent;
+}
+
 .navbar-nav > li > a {
 	text-transform: uppercase;
 	color: #1C216C;
 }
+
+.navbar-header .navbar-brand {
+    background-image: none;
+    background-size: inherit;
+    background-repeat: inherit;
+    background-position: inherit;
+    transition: color 0.2s ease 0.05s;
+    padding-left: 0;
+    color: inherit;
+}
+
+.navbar-header {
+    text-align: center;
+}
+
+.navbar-brand {
+    float: inherit;
+    padding: 10px 0;
+    font-size: 20px;
+    line-height: 25px;
+    height: 45px;
+}
+
+a.navbar-brand.text-center.img-center {
+    display: inline-block;
+    margin-right: -65px;
+}
+
+.nav-graffnestl {
+    border-bottom: 1px solid #1C216C;
+    border-top: 1px solid #1C216C;
+}
+
+.img-center {
+    margin: 0 auto;
+}
+
+
+.language {
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 3px;
+    margin-bottom: 18px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #1c216c;
+}
+
+
 
 @media (min-width: 768px) {
 	.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
@@ -166,6 +241,26 @@ h1.page-title .first-letter {
 	    padding-top: 5px;
 	    padding-bottom: 5px;
 	}
+
+    .navbar-header {
+        float: inherit;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .col-sm-offset-1-5{
+        margin-left: 0%;
+    }
+    .col-sm-8-5 {
+        width: 100%;
+    }
+
+    a.navbar-brand.text-center.img-center {
+        display: inline-block;
+        margin-right: 0;
+        width: 75%;
+    }
 }
 
 div.list-unstyled ul {

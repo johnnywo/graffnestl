@@ -24,35 +24,33 @@ code = "main-menu"
         {% styles %}
     </head>
     <body>
+        
+        <!-- Site Container -->
+        <div class="container site-container">
 
-        <!-- Header -->
-        <header id="layout-header">
-            {% partial 'site/header' %}
-        </header>
-
-        <!-- Content -->
-        <section id="layout-content">
-
-            <div class="container">
-
-                <div class="row">
-                            
-                    <div class="col-sm-8-5 col-sm-offset-1-5">
+            <div class="row">
                         
-                        {% page %}
+                <div class="col-sm-8-5 col-sm-offset-1-5 col-xs-12 col-xs-offset-0">
+                    
+                    <!-- Header -->
+                    <header id="layout-header">
+                        {% partial 'site/header' %}
+                    </header> <!-- End Header -->
+                    
+                    <!-- Content -->
+                    {% page %}
+                    <!-- End Content -->
 
-                        <!-- Footer -->
-                        <footer id="layout-footer">
-                            {% partial 'site/footer' %}
-                        </footer>
-    
-                    </div>
-            
+                    <!-- Footer -->
+                    <footer id="layout-footer">
+                        {% partial 'site/footer' %}
+                    </footer> <!-- End Footer -->
+
                 </div>
-
+        
             </div>
-            
-        </section>
+
+        </div> <!-- End Site Container -->
 
         <!-- Scripts -->
         <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
