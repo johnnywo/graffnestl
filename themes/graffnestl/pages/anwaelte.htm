@@ -6,7 +6,7 @@ layout = "default"
 ==
 
 <div class="page-header text-center">
-    <h1 class="page-title">{{ this.page.title }}</h1>
+    <h1 class="page-title">{{ this.page.title|_ }}</h1>
 </div>
 
 <div class="row">
@@ -33,23 +33,23 @@ layout = "default"
         <div class="col-sm-12">
         	<hr>
         	<p>
-        		<b>Kooperationspartner in Österreich</b> <br>
-				Rechtsanwalt <br>
+        		<b>{{ 'Kooperationspartner in Österreich'|_ }}</b> <br>
+				{{ 'Rechtsanwalt'|_ }} <br>
 				Mag. Ernst Ehringfeld <br>
 				Hauptplatz 20 <br>
 				A-2460 Bruck an der Leitha
 			</p>
 
 			<p>
-				<b>Kooperationspartner in Italien</b> <br>
-				Rechtsanwältin <br>
+				<b>{{ 'Kooperationspartner in Italien'|_ }}</b> <br>
+				{{ 'Rechtsanwältin'|_ }} <br>
 				Mag. Patrizia Raj <br>
 				I-20123 Milano
 			</p>
 
 			<p>
-				<b>Kooperationspartner in Kroatien</b> <br>
-				Rechtsanwältin <br>
+				<b>{{ 'Kooperationspartner in Kroatien'|_ }}</b> <br>
+				{{ 'Rechtsanwältin'|_ }} <br>
 				Sandra Budimir LL.M. <br>
 				Petrinjska 32a <br>
 				HR-10 000 Zagreb

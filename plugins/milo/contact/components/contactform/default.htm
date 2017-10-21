@@ -1,10 +1,10 @@
 {{ form_open({ request: 'onSubmitContactForm', files: true }) }}
 
-    <legend>Schreiben Sie uns eine Nachricht:</legend>
+    <legend>{{ 'Schreiben Sie uns eine Nachricht:'|_ }}</legend>
 
     <div class="form-group required">
         <label for="name">
-            Name
+            {{ 'Name'|_ }}
         </label>
         <input type="text" name="name" class="form-control" value="{{ form_value('name') }}" required="required">
         <p style="color:red;">{{ errors.first('name') }}</p>
@@ -12,7 +12,7 @@
 
     <div class="form-group required">
         <label for="email">
-            E-Mail
+            {{ 'E-Mail'|_ }}
         </label>
         <input type="text" name="email" class="form-control" value="{{ form_value('email') }}" required="required">
   		<p style="color:red;">{{ errors.first('email') }}</p>
@@ -21,7 +21,7 @@
 
     <div class="form-group">
         <label for="subject">
-            Betreff
+            {{ 'Betreff'|_ }}
         </label>
         <input type="text" name="subject" class="form-control" value="{{ form_value('subject') }}">
     </div>
@@ -32,7 +32,7 @@
 
     <div class="form-group required">
         <label for="message">
-            Nachricht
+            {{ 'Nachricht'|_ }}
         </label>
         <textarea class="form-control" rows="4" name="message" value="{{ form_value('message') }}"></textarea>
     </div>
@@ -48,7 +48,7 @@
 
     <div class="form-group">
         <button id="submit" type="submit" class="btn btn-info">
-            Absenden
+            {{ 'Absenden'|_ }}
         </button>
     </div>
 

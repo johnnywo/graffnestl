@@ -9,7 +9,9 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand text-center img-center" href="{{ 'home'|page }}">
+                {% if this.page.title != 'Home' %}
                 <img src="{{ 'assets/images/graffnestl-logo-small.png'|theme }}" alt="Graff Nestl & Partner Rechtsanwälte" class="img-responsive hidden-xs">
+                {% endif %}
                 <img src="{{ 'assets/images/graffnestl-logo-small_257px.png'|theme }}" alt="Graff Nestl & Partner Rechtsanwälte" class="img-responsive hidden-sm hidden-md hidden-lg">
             </a>
             <!-- Start Language Picker -->

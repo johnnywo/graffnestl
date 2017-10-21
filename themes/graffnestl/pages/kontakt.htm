@@ -6,7 +6,7 @@ layout = "default"
 ==
 
 <div class="page-header text-center">
-    <h1 class="page-title">{{ this.page.title }}</h1>
+    <h1 class="page-title">{{ this.page.title|_ }}</h1>
 </div>
 
 <div class="row">
@@ -25,6 +25,60 @@ layout = "default"
 			E <a href="mailto: {{ html_email('office@graffnestl.com')|raw }}">office@graffnestl.com</a>
 		</p>
 
-		{% component 'contactForm' %}
+		{{ form_open({ request: 'onSubmitContactForm', files: true }) }}
+
+		    <legend>{{ 'Schreiben Sie uns eine Nachricht:'|_ }}</legend>
+
+		    <div class="form-group required">
+		        <label for="name">
+		            {{ 'Name'|_ }}
+		        </label>
+		        <input type="text" name="name" class="form-control" value="{{ form_value('name') }}" required="required">
+		        <p style="color:red;">{{ errors.first('name') }}</p>
+		    </div>
+
+		    <div class="form-group required">
+		        <label for="email">
+		            {{ 'E-Mail'|_ }}
+		        </label>
+		        <input type="text" name="email" class="form-control" value="{{ form_value('email') }}" required="required">
+		  		<p style="color:red;">{{ errors.first('email') }}</p>
+		    	
+		    </div>
+
+		    <div class="form-group">
+		        <label for="subject">
+		            {{ 'Betreff'|_ }}
+		        </label>
+		        <input type="text" name="subject" class="form-control" value="{{ form_value('subject') }}">
+		    </div>
+
+		    <div class="antispam">Leave this empty:
+		        <input type="text" name="url">
+		    </div>
+
+		    <div class="form-group required">
+		        <label for="message">
+		            {{ 'Nachricht'|_ }}
+		        </label>
+		        <textarea class="form-control" rows="4" name="message" value="{{ form_value('message') }}"></textarea>
+		    </div>
+
+		    <div class="form-group">
+		    	<label for="file-upload" class="custom-file-upload">
+		            <i class="icon-cloud-upload"></i> File Upload
+		        </label>
+		        <span id="file-selected"></span>
+		    	<input id="file-upload" type="file" name="file">
+		    	<p style="color:red;">{{ errors.first('file') }}</p>
+		    </div>
+
+		    <div class="form-group">
+		        <button id="submit" type="submit" class="btn btn-info">
+		            {{ 'Absenden'|_ }}
+		        </button>
+		    </div>
+
+		{{ form_close() }}
 	</div>
 </div>

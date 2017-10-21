@@ -1,6 +1,15 @@
 name: 'Main Menu'
 items:
     -
+        title: 'Home'
+        type: cms-page
+        code: ''
+        reference: home
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
         title: Fachgebiete
         nesting: '0'
         type: static-page
