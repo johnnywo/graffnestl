@@ -345,3 +345,22 @@ legend {
 .lawyer-name-block {
     min-height: 100px;
 }
+
+.m-t-xl{
+    margin-top: 80px;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #7477a7;
+    color: white;
+}
+
+.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a {
+    background: transparent;
+    color: inherit;
+}
+
+.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a {
+     transition: none; 
+}

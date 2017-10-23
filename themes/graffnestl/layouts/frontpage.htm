@@ -1,0 +1,60 @@
+description = "Frontpage layout"
+
+[localePicker]
+[staticMenu]
+code = "main-menu"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>{{ this.page.title }} | Graff Nestl & Partner Rechtsanwälte</title>
+        <meta name="description" content="{{ this.page.meta_description }}">
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="author" content="Graff Nestl & Partner Rechtsanwälte">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="generator" content="OctoberCMS">
+        <link rel="icon" type="image/png" href="{{ 'assets/images/graffnestl.png'|theme }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+        <link href="{{ [
+            'assets/css/vendor.css',
+            'assets/css/theme.css',
+            'assets/css/graffnestl.css'
+            ]|theme }}" rel="stylesheet"> 
+        {% styles %}
+    </head>
+    <body>
+        
+        <!-- Site Container -->
+        <div class="container site-container">
+
+            <div class="row">
+                        
+                <div class="col-sm-8-5 col-sm-offset-1-5 col-xs-12 col-xs-offset-0">
+                    
+                    <!-- Content -->
+                    {% page %}
+                    <!-- End Content -->
+
+                    <!-- Footer -->
+                    <footer id="layout-footer">
+                        {% partial 'site/footer' %}
+                    </footer> <!-- End Footer -->
+
+                </div>
+        
+            </div>
+
+        </div> <!-- End Site Container -->
+
+        <!-- Scripts -->
+        <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
+        <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+        <script src="{{ 'assets/javascript/app.js'|theme }}"></script>
+
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>
