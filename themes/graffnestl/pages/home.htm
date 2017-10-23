@@ -1,14 +1,59 @@
 title = "Home"
-url = "/home"
-layout = "default"
+url = "/"
+layout = "frontpage"
 ==
 
 <div class="row">
-    <div class="col-sm-12 text-center m-t-lg">
-        <img src="{{ 'assets/images/graffnestl-logo-big.png'|theme }}" alt="Graff Nestl & Partner Rechtsanwälte Logo" class="img-responsive">
-        <hr class="m-t-md">
+    <div class="col-sm-8 col-sm-offset-2 m-t-xl">
+        <a href="{{ '/fachgebiete'|_ }}"><img src="{{ 'assets/images/graffnestl-logo-big.png'|theme }}" alt="Graff Nestl & Partner Rechtsanwälte Logo" class="img-responsive"></a>
     </div>
+</div>
 
+<div class="row">
+    <div class="col-sm-12 text-center">
+        <ul class="list-unstyled list-inline m-t-md">
+            <li>
+                <a href="#" 
+                data-request="onSwitchLocale" 
+                data-request-data="locale: 'de'">
+                <img src="{{ 'assets/images/country-flags/Germany.png'|theme }}" alt="Deutsch">
+                </a>
+            </li>
+            <li>
+                <a href="#" 
+                data-request="onSwitchLocale" 
+                data-request-data="locale: 'en'">
+                <img src="{{ 'assets/images/country-flags/United_Kingdom.png'|theme }}" alt="English">
+                </a>
+            </li>
+            <li>
+                <a href="#" 
+                data-request="onSwitchLocale" 
+                data-request-data="locale: 'ru'">
+                <img src="{{ 'assets/images/country-flags/Russian_Federation.png'|theme }}" alt="Russisch">
+                </a>
+            </li>
+            <li>
+                <a href="#" 
+                data-request="onSwitchLocale" 
+                data-request-data="locale: 'sk'">
+                <img src="{{ 'assets/images/country-flags/Slovakia.png'|theme }}" alt="Slovakisch">
+                </a>
+            </li>
+            <li>
+                <a href="#" 
+                data-request="onSwitchLocale" 
+                data-request-data="locale: 'it'">
+                <img src="{{ 'assets/images/country-flags/Italy.png'|theme }}" alt="Italienisch">
+                </a>
+            </li>
+        </ul>
+        <hr class="m-t-md">
+        <a href="{{ '/fachgebiete'|_ }}"><img src="{{ 'assets/images/GNBX-0283.jpg'|theme }}" alt="Graff Nestl & Partner Rechtsanwälte Kanzlei" class="img-responsive"></a>
+    </div>
+</div>
+
+<div class="row">
     <div class="col-sm-8 col-sm-offset-2 text-center m-t-sm">
         <h4 style="line-height: 1.4;">
             <b>Aurea prima sata est aetas, quae vindice nullo,

@@ -1,15 +1,6 @@
 name: 'Main Menu'
 items:
     -
-        title: 'Home'
-        type: cms-page
-        code: ''
-        reference: home
-        viewBag:
-            isHidden: '0'
-            cssClass: ''
-            isExternal: '0'
-    -
         title: Fachgebiete
         nesting: '0'
         type: static-page
@@ -24,9 +15,13 @@ items:
             isExternal: '0'
     -
         title: 'Anwälte & Juristen'
+        nesting: ''
         type: cms-page
+        url: ''
         code: ''
         reference: anwaelte
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
@@ -58,10 +53,14 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: 'Kontakt'
+        title: Kontakt
+        nesting: ''
         type: cms-page
+        url: ''
         code: ''
         reference: kontakt
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
