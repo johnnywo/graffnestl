@@ -164,6 +164,12 @@ h1.page-title .first-letter {
 	color: #1C216C;
 }
 
+.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a {
+    text-decoration: none;
+    background-color: #7477a7;
+    color: white;
+}
+
 .navbar-header .navbar-brand {
     background-image: none;
     background-size: inherit;
@@ -360,6 +366,12 @@ legend {
     background: transparent;
     color: inherit;
 }
+
+/*.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a {
+    text-decoration: none;
+    background-color: #7477a7;
+    color: white;
+}*/
 
 .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a {
      transition: none; 
