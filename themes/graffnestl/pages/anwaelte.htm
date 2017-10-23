@@ -13,7 +13,7 @@ layout = "default"
         {% for lawyer in lawyers %}
         <div class="col-sm-2 fs-13 b-right">
         	{% if lawyer.photo %}
-       			<a href="/anwaelte/{{ lawyer.slug }}">
+       			<a href="{{ url() }}/anwaelte/{{ lawyer.slug }}">
        				<img src="{{ lawyer.photo.getThumb(122,170,{'mode':'crop'}) }}" alt="{{ lawyer.title }} {{ lawyer.name }}" class="img-responsive m-b-sm">
        			</a>
         	{% endif %}
