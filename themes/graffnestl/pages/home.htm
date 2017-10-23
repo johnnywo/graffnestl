@@ -5,7 +5,9 @@ layout = "frontpage"
 
 <div class="row">
     <div class="col-sm-8 col-sm-offset-2 m-t-xl">
-        <a href="{{ '/fachgebiete'|_ }}"><img src="{{ 'assets/images/graffnestl-logo-big.png'|theme }}" alt="Graff Nestl & Partner Rechtsanwälte Logo" class="img-responsive"></a>
+        <a href="{{ url('/fachgebiete'|_) }}">
+            <img src="{{ 'assets/images/graffnestl-logo-554px.png'|theme }}" alt="Graff Nestl & Partner Rechtsanwälte Logo" class="img-responsive">
+        </a>
     </div>
 </div>
 
@@ -48,22 +50,25 @@ layout = "frontpage"
                 </a>
             </li>
         </ul>
-        <hr class="m-t-md">
-        <a href="{{ '/fachgebiete'|_ }}"><img src="{{ 'assets/images/GNBX-0283.jpg'|theme }}" alt="Graff Nestl & Partner Rechtsanwälte Kanzlei" class="img-responsive"></a>
-    </div>
-</div>
+        <hr class="m-t-md m-b-sm">
 
-<div class="row">
-    <div class="col-sm-8 col-sm-offset-2 text-center m-t-sm">
-        <h4 style="line-height: 1.4;">
-            <b>Aurea prima sata est aetas, quae vindice nullo,
-                        sponte sua, sine lege fidem rectumque colebat.
-                        Poena metusque aberant, nec verba minantia fixo
-                        aere legebantur, nec supplex turba timebat
-                        iudicis ora sui, sed erant sine vindice tuti.</b>
-        </h4>
-        <p>{{ 'Das Zitat von Ovidius aus dessen "Metamorphosen" stellt eine ideale Vorstellung der Gesellschaft dar, in der keine Gesetzbücher, Richter, Staatsanwälte oder Rechtsanwälte benötigt werden. Nachdem dieser Zustand in einer modernen Gesellschaft nicht erreicht werden kann, steht unsere Rechtsanwaltskanzlei unseren Mandanten verschwiegen, loyal, gewissenhaft und kompetent bei.'|_ }}
-        </p>
+        <div class="img-hover-container">
+            <a href="{{ url('/fachgebiete'|_) }}" class="overlay">
+                <div class="text">
+                            <h4 style="line-height: 1.4;">
+                                <b>Aurea prima sata est aetas, quae vindice nullo,
+                                            sponte sua, sine lege fidem rectumque colebat.
+                                            Poena metusque aberant, nec verba minantia fixo
+                                            aere legebantur, nec supplex turba timebat
+                                            iudicis ora sui, sed erant sine vindice tuti.</b>
+                            </h4>
+                            <p>{{ 'Das Zitat von Ovidius aus dessen "Metamorphosen" stellt eine ideale Vorstellung der Gesellschaft dar, in der keine Gesetzbücher, Richter, Staatsanwälte oder Rechtsanwälte benötigt werden. Nachdem dieser Zustand in einer modernen Gesellschaft nicht erreicht werden kann, steht unsere Rechtsanwaltskanzlei unseren Mandanten verschwiegen, loyal, gewissenhaft und kompetent bei.'|_ }}
+                            </p>
+                </div>
+            </a>
+        </div>
+
+
     </div>
 </div>
 
