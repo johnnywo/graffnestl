@@ -368,7 +368,7 @@ legend {
 .img-hover-container {
     width: 100%;
     height: 326px;
-    background: url("/themes/graffnestl/assets/images/GNBX-0283.jpg");
+    background: url("../images/GNBX-0283.jpg");
     margin: 0 auto;
     background-size: cover;
     overflow: hidden;
