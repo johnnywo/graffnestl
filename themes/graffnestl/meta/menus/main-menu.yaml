@@ -40,6 +40,15 @@ items:
             cssClass: ''
             isExternal: '0'
     -
+        title: News
+        type: cms-page
+        code: ''
+        reference: news
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
         title: Kooperationen
         nesting: '0'
         type: static-page

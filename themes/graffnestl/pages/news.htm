@@ -1,0 +1,28 @@
+title = "News & Publikationen"
+url = "/news"
+layout = "default"
+==
+<?php
+    function onStart()
+    {
+        $lexisnexis = 'https://www.lexisnexis.at/vie/rss/lnrechtsnewsmonitor.xml';
+        $this['news'] = simplexml_load_file( $lexisnexis );
+    }
+?>
+==
+<div class="page-header text-center">
+    <h1 class="page-title">{{ this.page.title|_ }}</h1>
+</div>
+
+{% for item in news.entry %}
+
+    <div class="grey p-t"><i>{{ "now"|date('d.m.Y') }} | {% for category in item.category.attributes %} {{ category }} {% endfor %}</i></div>
+    <b>{{ item.title }}</b>
+    <p>{{ item.content|raw }}</p>
+
+{% endfor %}
+
+ 
+
+
+
