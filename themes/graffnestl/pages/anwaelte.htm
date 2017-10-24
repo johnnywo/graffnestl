@@ -13,14 +13,14 @@ layout = "default"
         {% for lawyer in lawyers %}
         <div class="col-sm-2 fs-13 b-right">
         	{% if lawyer.photo %}
-       			<a href="{{ url() }}/anwaelte/{{ lawyer.slug }}">
+       			<a href="{{ url('/anwaelte') }}/{{ lawyer.slug }}">
        				<img src="{{ lawyer.photo.getThumb(122,170,{'mode':'crop'}) }}" alt="{{ lawyer.title }} {{ lawyer.name }}" class="img-responsive m-b-sm">
        			</a>
         	{% endif %}
 
             <div class="lawyer-name-block">
             	<span class="grey"><i>{{ lawyer.jobtitle }}</i></span> <br>
-                <a href="/anwaelte/{{ lawyer.slug }}" class="a-blue">{{ lawyer.name }}</a> <br>
+                <a href="{{ url('/anwaelte') }}/{{ lawyer.slug }}" class="a-blue">{{ lawyer.name }}</a> <br>
                 <span class="grey"><i>{{ lawyer.title }}</i></span>
             </div>
             <div class="list-unstyled fs-12">

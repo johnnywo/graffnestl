@@ -1,7 +1,6 @@
 <?php namespace Milo\Lawyer\Components;
 
 use Cms\Classes\ComponentBase;
-use Milo\Lawyer\Models\Lawyer;
 use Redirect;
 
 class Lawyers extends ComponentBase
@@ -26,7 +25,7 @@ class Lawyers extends ComponentBase
 
     public function lawyers()
     {
-        $lawyers = Lawyer::all();
+        $lawyers = \Milo\Lawyer\Models\Lawyer::all();
 
         return $lawyers;
     }
