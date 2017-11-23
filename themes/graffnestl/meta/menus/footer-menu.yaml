@@ -1,0 +1,24 @@
+name: 'Footer Menu'
+items:
+    -
+        title: Impressum
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: impressum
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: AGB
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: agb
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
