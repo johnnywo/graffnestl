@@ -27,7 +27,18 @@ class Lawyer extends Model
     /**
      * @var array Attributes that support translation, if available.
      */
-    public $translatable = ['title', 'jobtitle', 'address', 'relation', 'focus', 'focus_short', 'experience', 'education', 'languages'];
+    public $translatable = [
+        'name', 
+        'title', 
+        'jobtitle', 
+        'address', 
+        'relation', 
+        'focus', 
+        'focus_short', 
+        'experience', 
+        'education', 
+        'languages'
+    ];
 
     /**
      * @var array Guarded fields
