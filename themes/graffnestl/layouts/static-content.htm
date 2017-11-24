@@ -48,7 +48,13 @@ code = "main-menu"
                             {% partial 'static-content/image.htm' %}
                             {% placeholder col_one title="Linke Spalte" type="html" %}
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 
+                        {% if (this.page.title == 'Kanzlei') or 
+                                (this.page.title == 'Lo Studio') or
+                                (this.page.title == 'Advokátska kancelária') or 
+                                (this.page.title == 'The Law Firm') or
+                                (this.page.title == 'Фирма')
+                                %} text-justify {% endif %}">
                             {% placeholder col_two title="Rechte Spalte" type="html" %}
                         </div>
                     </div>
