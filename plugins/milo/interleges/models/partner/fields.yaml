@@ -1,0 +1,33 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    company:
+        label: Kanzlei
+        span: left
+    country:
+        label: Land
+        span: right
+    picture:
+        label: Bild
+        type: fileupload
+        mode: image
+        imageHeight: 360
+        imageWidth: 360
+        thumbOptions:
+            mode: crop
+            offset:
+                - 0
+                - 0
+            quality: 90
+            sharpen: 0
+            interlace: false
+            extension: auto
+    continent:
+        label: Kontinent
+        type: radio
+        options:
+            Americas: Americas
+            Europe: Europe
+            MiddleEast_Asia: Middle East & Asia 

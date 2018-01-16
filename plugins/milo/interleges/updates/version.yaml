@@ -1,0 +1,4 @@
+1.0.1: First version of Interleges
+1.0.2: 
+    - Database Migration
+    - create_partners_table.php

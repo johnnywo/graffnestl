@@ -1,0 +1,21 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    company:
+        label: Kanzlei
+        searchable: true
+    country:
+        label: Land
+        searchable: true
+    picture:
+        label: Bild
+        type: partial
+        path: ~/plugins/milo/interleges/models/partner/_picture.htm
+    continent:
+        label: Kontinent
+        searchable: true

@@ -1,0 +1,53 @@
+<div class="row">
+	<div class="col-md-12 p-b-sm">AMERICAS
+		<hr class="m-t-sm">
+	</div>
+{% for item in cooperations.partner %}
+	{% if item.continent == 'Americas' %}
+		<div class="col-sm-6 m-b-md">
+			<div style="background-image: url({{ item.picture.getThumb(424,318,{'mode':'crop'})}}); height: 318px; padding-top: 132px;">
+				{# <img src="{{ item.picture.getThumb(273,204,{'mode':'crop'})}}" alt="{{ item.company }}" class="img-responsive fr-fil fr-dib"> #}
+				<div class="interleges_text"><small>{{ item.country }}</small><br>
+					<strong>{{ item.company }}</strong>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+{% endfor %}
+</div>
+
+<div class="row">
+	<div class="col-md-12 p-b-sm">EUROPE
+		<hr class="m-t-sm">
+	</div>
+{% for item in cooperations.partner %}
+	{% if item.continent == 'Europe' %}
+		<div class="col-sm-6 m-b-md">
+			<div style="background-image: url({{ item.picture.getThumb(424,318,{'mode':'crop'})}}); height: 318px; padding-top: 132px;">
+				{# <img src="{{ item.picture.getThumb(273,204,{'mode':'crop'})}}" alt="{{ item.company }}" class="img-responsive fr-fil fr-dib"> #}
+				<div class="interleges_text"><small>{{ item.country }}</small><br>
+					<strong>{{ item.company }}</strong>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+{% endfor %}
+</div>
+
+<div class="row">
+	<div class="col-md-12 p-b-sm">MIDDLE EAST & ASIA
+		<hr class="m-t-sm">
+	</div>
+{% for item in cooperations.partner %}
+	{% if item.continent == 'MiddleEast_Asia' %}
+		<div class="col-sm-6 m-b-md">
+			<div style="background-image: url({{ item.picture.getThumb(424,318,{'mode':'crop'})}}); height: 318px; padding-top: 132px;">
+				{# <img src="{{ item.picture.getThumb(273,204,{'mode':'crop'})}}" alt="{{ item.company }}" class="img-responsive fr-fil fr-dib"> #}
+				<div class="interleges_text"><small>{{ item.country }}</small><br>
+					<strong>{{ item.company }}</strong>
+				</div>
+			</div>
+		</div>
+	{% endif %}
+{% endfor %}
+</div>

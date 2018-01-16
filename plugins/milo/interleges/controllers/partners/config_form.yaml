@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Partner
+
+# Model Form Field configuration
+form: $/milo/interleges/models/partner/fields.yaml
+
+# Model Class name
+modelClass: Milo\Interleges\Models\Partner
+
+# Default redirect location
+defaultRedirect: milo/interleges/partners
+
+# Create page
+create:
+    title: Create Partner
+    redirect: milo/interleges/partners/update/:id
+    redirectClose: milo/interleges/partners
+
+# Update page
+update:
+    title: Edit Partner
+    redirect: milo/interleges/partners
+    redirectClose: milo/interleges/partners
+
+# Preview page
+preview:
+    title: Preview Partner
