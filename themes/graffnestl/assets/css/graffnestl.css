@@ -14,6 +14,14 @@ body {
     background: linear-gradient(135deg, #faf9fc 0%,#dedee8 51%,#faf9fc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#faf9fc', endColorstr='#faf9fc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
+    
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d7e1e9+0,ffffff+51,d7e1e9+100 */
+    background: #d7e1e9; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #d7e1e9 0%, #ffffff 51%, #d7e1e9 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #d7e1e9 0%,#ffffff 51%,#d7e1e9 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #d7e1e9 0%,#ffffff 51%,#d7e1e9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7e1e9', endColorstr='#d7e1e9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Georgia', serif;
@@ -23,7 +31,8 @@ body {
 }
 
 body, p, h1, h2, h3, h4, h5, h6 {
-	color: #1C216C;
+	/*color: #1C216C;*/
+    color: #114B7D;
 }
 
 .site-container {
@@ -74,22 +83,27 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .language .btn-default {
-    color: #A5A7C4;
-    background-color: #ffffff;
-    border-color: #A5A7C4;
+    /*color: #A5A7C4;*/
+    /*background-color: #ffffff;
+    border-color: #A5A7C4;*/
+    color: #88A5BE;
+    border-color: #88A5BE;
+    /*background-color: #88A5BE;*/
 }
 
 a {
-	color: #9EA0BF;
+	/*color: #9EA0BF;*/
+    color: #114B7D;
 }
 
 a:hover, a:focus {
-    color: #1C216C;
+    color: #114B7D;
     text-decoration: underline;
 }
 
 a.a-blue {
-    color: #1C216C;
+    /*color: #1C216C;*/
+    color: #114B7D;
 }
 
 hr {
@@ -143,13 +157,17 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
 
 .btn-info {
     color: #ffffff;
-    background-color: #595b82;
-    border-color: #1C216C;
+    /*background-color: #595b82;
+    border-color: #1C216C;*/
+    background-color: #6087A8;
+    border-color: #114B7D;
 }
 
 .btn-info:hover, .btn-info:active, .btn-info:focus {
-    background-color: #8e90ab;
-    border-color: #474c94;
+    /*background-color: #8e90ab;
+    border-color: #474c94;*/
+    background-color: #114B7D;
+    border-color: #114B7D;
 }
 
 .border-1, .oc-img-bordered {
@@ -184,14 +202,21 @@ h1.page-title .first-letter {
     float: none;
 }
 
+/*.navbar-nav li.active > a {
+    background-color: #7477a7;
+    color: white;
+}*/
+
 .navbar-nav > li > a {
 	text-transform: uppercase;
-	color: #1C216C;
+    color: #114B7D;
+	/*color: #1C216C;*/
 }
 
 .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a {
     text-decoration: none;
-    background-color: #7477a7;
+    /*background-color: #7477a7;*/
+    background-color: #6087A8;
     color: white;
 }
 
@@ -223,8 +248,10 @@ a.navbar-brand.text-center.img-center {
 }
 
 .nav-graffnestl {
-    border-bottom: 1px solid #1C216C;
-    border-top: 1px solid #1C216C;
+    /*border-bottom: 1px solid #1C216C;*/
+    /*border-top: 1px solid #1C216C;*/
+    border-top: 1px solid #6087A8;
+    border-bottom: 1px solid #6087A8;
 }
 
 .img-center {
@@ -255,7 +282,8 @@ a.navbar-brand.text-center.img-center {
     width: 22px;
     height: 2px;
     border-radius: 1px;
-    background-color: #1c216c;
+    /*background-color: #1c216c;*/
+    background-color: #114B7D;
 }
 
 
@@ -395,14 +423,15 @@ legend {
 
 .nav > li > a:hover, .nav > li > a:focus {
     text-decoration: none;
-    background-color: #7477a7;
+    /*background-color: #7477a7;*/
+    background-color: #6087A8;
     color: white;
 }
 
-.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a {
+/*.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a {
     background: transparent;
     color: inherit;
-}
+}*/
 
 /*.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a {
     text-decoration: none;
@@ -434,7 +463,8 @@ legend {
 
 .overlay {
   display: block;
-  background: rgba(42, 46, 107, 0.85);
+  /*background: rgba(42, 46, 107, 0.85);*/
+  background: #56758FCC;
   text-align: center;
   padding: 66px 40px 203px 40px;
   opacity: 0;
