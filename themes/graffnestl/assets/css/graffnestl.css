@@ -39,11 +39,11 @@ body, p, h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
-.col-sm-8-5 {
+.col-md-8-5 {
 	width: 75%;
 }
 
-.col-sm-offset-1-5{
+.col-md-offset-1-5{
 	margin-left: 12.5%;
 }
 
@@ -174,6 +174,16 @@ h1.page-title .first-letter {
     border: 1px solid transparent;
 }
 
+.navbar-nav {
+    text-align: center;
+    float: none;
+}
+
+.navbar-nav > li {
+    display: inline-block;
+    float: none;
+}
+
 .navbar-nav > li > a {
 	text-transform: uppercase;
 	color: #1C216C;
@@ -266,14 +276,18 @@ a.navbar-brand.text-center.img-center {
     .navbar-header {
         float: inherit;
     }
+
+    .lawyer-name-block {
+        min-height: 100px;
+    }
 }
 
 
 @media (max-width: 767px) {
-    .col-sm-offset-1-5{
+    .col-md-offset-1-5{
         margin-left: 0%;
     }
-    .col-sm-8-5 {
+    .col-md-8-5 {
         width: 100%;
     }
 
@@ -281,6 +295,18 @@ a.navbar-brand.text-center.img-center {
         display: inline-block;
         margin-right: 0;
         width: 75%;
+    }
+
+    .navbar-nav {
+        text-align: left;
+    }
+
+    .navbar-nav > li {
+        display: block;
+    }
+
+    h1.page-title {
+        font-size: 32px;
     }
 }
 
@@ -363,10 +389,6 @@ legend {
     border-right: 1px solid #f2f2f9;
 }
 
-.lawyer-name-block {
-    min-height: 100px;
-}
-
 .m-t-xl{
     margin-top: 80px;
 }
@@ -414,7 +436,7 @@ legend {
   display: block;
   background: rgba(42, 46, 107, 0.85);
   text-align: center;
-  padding: 40px 40px 203px 40px;
+  padding: 66px 40px 203px 40px;
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s ease;;
@@ -434,5 +456,17 @@ legend {
     text-align: center;
     padding: 5px;
     text-transform: uppercase;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+.flex-row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
 }
 

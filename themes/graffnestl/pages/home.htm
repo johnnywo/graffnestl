@@ -52,7 +52,7 @@ layout = "frontpage"
         </ul>
         <hr class="m-t-md m-b-sm">
 
-        <div class="img-hover-container">
+        <div class="img-hover-container hidden-xs">
             <a href="{{ url('/fachgebiete'|_) }}" class="overlay">
                 <div class="text">
                             <h4 style="line-height: 1.4;">
@@ -67,6 +67,10 @@ layout = "frontpage"
                 </div>
             </a>
         </div>
+
+        <a href="{{ url('/fachgebiete'|_) }}" class="hidden-sm hidden-md hidden-lg">
+            <img src="{{ 'assets/images/GNBX-0283.jpg'|theme }}" alt="Graff Nestl & Partner Rechtsanwälte" class="img-responsive">
+        </a>
 
 
     </div>

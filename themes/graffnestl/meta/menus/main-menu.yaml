@@ -40,7 +40,7 @@ items:
             cssClass: ''
             isExternal: '0'
     -
-        title: News
+        title: 'News & Publikationen'
         type: cms-page
         code: ''
         reference: news

@@ -9,9 +9,9 @@ layout = "default"
     <h1 class="page-title">{{ this.page.title|_ }}</h1>
 </div>
 
-<div class="row">
+<div class="row flex-row">
         {% for lawyer in lawyers %}
-        <div class="col-sm-2 fs-13 b-right">
+        <div class="col-xs-6 col-sm-2 fs-13 b-right">
         	{% if lawyer.photo %}
        			<a href="{{ url('/anwaelte') }}/{{ lawyer.slug }}">
        				<img src="{{ lawyer.photo.getThumb(122,170,{'mode':'crop'}) }}" alt="{{ lawyer.title }} {{ lawyer.name }}" class="img-responsive m-b-sm">
