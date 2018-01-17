@@ -51,7 +51,11 @@ jQuery(document).ready(function($){
     });
 
     // /kontakt: show uploaded file on contact form
-    $('#file-upload').bind('change', function() { var fileName = ''; fileName = $(this).val(); $('#file-selected').html(fileName); })
+    $('#file-upload').bind('change', function() { 
+        var fileName = ''; 
+        fileName = $(this).val(); 
+        $('#file-selected').html(fileName); 
+    })
 
     // Menü Simple Sidebar
     $("#menu-toggle").click(function(e) {
@@ -63,6 +67,6 @@ jQuery(document).ready(function($){
 });
 
 // /: show Overlay Text for Mobile Devices after Hero Image
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+/*if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
    $("#zitatXs").append( $( "#zitat" ) );
-}
+}*/
