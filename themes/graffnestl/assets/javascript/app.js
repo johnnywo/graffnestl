@@ -59,10 +59,10 @@ jQuery(document).ready(function($){
         $("#wrapper").toggleClass("toggled");
         $("button.navbar-toggle").toggleClass("active");
     });
-    
-    // /: show Overlay Text for Mobile Devices after Hero Image
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-       $("#zitatXs").append( $( "#zitat" ) );
-    }
 
 });
+
+// /: show Overlay Text for Mobile Devices after Hero Image
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   $("#zitatXs").append( $( "#zitat" ) );
+}
