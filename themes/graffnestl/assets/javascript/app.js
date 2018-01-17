@@ -53,16 +53,16 @@ jQuery(document).ready(function($){
     // /kontakt: show uploaded file on contact form
     $('#file-upload').bind('change', function() { var fileName = ''; fileName = $(this).val(); $('#file-selected').html(fileName); })
 
-    // /: show Overlay Text for Mobile Devices after Hero Image
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-       $("#zitatXs").append( $( "#zitat" ) );
-    }
-
     // Menü Simple Sidebar
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
         $("button.navbar-toggle").toggleClass("active");
     });
+    
+    // /: show Overlay Text for Mobile Devices after Hero Image
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+       $("#zitatXs").append( $( "#zitat" ) );
+    }
 
 });
