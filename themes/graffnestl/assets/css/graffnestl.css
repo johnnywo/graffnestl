@@ -366,7 +366,6 @@ h1.page-title .first-letter {
         position: fixed;
         right: 0;
         left: 0;
-        z-index: 99999;
     }
 
     .navbar-nav {
@@ -552,6 +551,10 @@ legend {
 .required > label::after {
     content: ' *';
     color: red;
+}
+
+#page-content-wrapper {
+    padding: 15px 0 15px 0;
 }
 
 
