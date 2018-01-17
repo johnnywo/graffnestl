@@ -1,0 +1,42 @@
+[staticMenu]
+code = "main-menu"
+==
+<ul class="sidebar-nav">
+    <li class="sidebar-brand">
+        <a href="{{ url('/') }}">
+            Graff Nestl & Partner
+        </a>
+    </li>
+    {% if staticMenu.menuItems %}
+        {% for item in menuItems if not item.viewBag.isHidden %}
+            <li role="presentation" class="{{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }} {{ item.viewBag.cssClass }}">
+                {% if item.url %}
+                    <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
+                        {{ item.title|_ }}
+                    </a>
+                {% else %}
+                    <span>{{ item.title|_ }}</span>
+                {% endif %}
+
+                {% if item.items %}
+                    <ul>{% partial __SELF__ ~ "::items" items=item.items %}</ul>
+                {% endif %}
+            </li>
+        {% endfor %}
+    {% endif %}
+
+    <!-- Start Language Picker -->
+    <div class="language hidden-sm hidden-md hidden-lg">
+
+             {{ form_open() }}
+                 <select name="locale" data-request="onSwitchLocale" class="selectpicker">
+                     {% for code, name in locales %}
+                         <option value="{{ code }}" {{ code == activeLocale ? 'selected' }}>{{ code|upper }}</option>
+                     {% endfor %}
+                 </select>
+
+             {{ form_close() }}
+
+     </div> <!-- End Language Picker -->
+
+</ul>

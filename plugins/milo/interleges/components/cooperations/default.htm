@@ -5,10 +5,12 @@
 {% for item in cooperations.partner %}
 	{% if item.continent == 'Americas' %}
 		<div class="col-sm-6 m-b-md">
-			<div style="background-image: url({{ item.picture.getThumb(488,318,{'mode':'crop'})}}); height: 318px; padding-top: 132px;">
-				{# <img src="{{ item.picture.getThumb(273,204,{'mode':'crop'})}}" alt="{{ item.company }}" class="img-responsive fr-fil fr-dib"> #}
+			<div class="box" style="background-image: url({{ item.picture.getThumb(488,318,{'mode':'crop'})}}); height: 318px; padding-top: 132px;">
 				<div class="interleges_text"><small>{{ item.country }}</small><br>
 					<strong>{{ item.company }}</strong>
+				</div>
+				<div class="photocredit hidden">
+					<small><i>{{ item.picture.title }}</i></small>
 				</div>
 			</div>
 		</div>
@@ -23,10 +25,12 @@
 {% for item in cooperations.partner %}
 	{% if item.continent == 'Europe' %}
 		<div class="col-sm-6 m-b-md">
-			<div style="background-image: url({{ item.picture.getThumb(488,318,{'mode':'crop'})}}); height: 318px; padding-top: 132px;">
-				{# <img src="{{ item.picture.getThumb(273,204,{'mode':'crop'})}}" alt="{{ item.company }}" class="img-responsive fr-fil fr-dib"> #}
+			<div class="box" style="background-image: url({{ item.picture.getThumb(488,318,{'mode':'crop'})}}); height: 318px; padding-top: 132px;">
 				<div class="interleges_text"><small>{{ item.country }}</small><br>
 					<strong>{{ item.company }}</strong>
+				</div>
+				<div class="photocredit hidden">
+					<small><i>{{ item.picture.title }}</i></small>
 				</div>
 			</div>
 		</div>
@@ -41,10 +45,12 @@
 {% for item in cooperations.partner %}
 	{% if item.continent == 'MiddleEast_Asia' %}
 		<div class="col-sm-6 m-b-md">
-			<div style="background-image: url({{ item.picture.getThumb(488,318,{'mode':'crop'})}}); height: 318px; padding-top: 132px;">
-				{# <img src="{{ item.picture.getThumb(273,204,{'mode':'crop'})}}" alt="{{ item.company }}" class="img-responsive fr-fil fr-dib"> #}
+			<div class="box" style="background-image: url({{ item.picture.getThumb(488,318,{'mode':'crop'})}}); height: 318px; padding-top: 132px;">
 				<div class="interleges_text"><small>{{ item.country }}</small><br>
 					<strong>{{ item.company }}</strong>
+				</div>
+				<div class="photocredit hidden">
+					<small><i>{{ item.picture.title }}</i></small>
 				</div>
 			</div>
 		</div>

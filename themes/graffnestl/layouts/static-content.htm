@@ -20,60 +20,82 @@ code = "main-menu"
         <link href="{{ [
             'assets/css/vendor.css',
             'assets/css/theme.css',
+            'assets/css/simple-sidebar.css',
             'assets/css/graffnestl.css'
-            ]|theme }}" rel="stylesheet"> 
+            ]|theme }}" rel="stylesheet">  
         {% styles %}
     </head>
     <body>
 
-        <!-- Site Container -->
-        <div class="container site-container">
+        <div id="wrapper">
 
-            <div class="row">
-                        
-                <!-- <div class="col-sm-8-5 col-sm-offset-1-5 col-xs-12 col-xs-offset-0"> -->
-                    <div class="col-xs-12 col-md-10 col-md-offset-1">
-
-                    <!-- Header -->
-                    <header id="layout-header">
-                        {% partial 'site/header' %}
-                    </header> <!-- End Header -->
-
-                    <!-- Content -->
-                    <div class="page-header text-center">
-                        <h1 class="page-title">{{ this.page.title }}</h1>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-6">
-                            {% partial 'static-content/image.htm' %}
-                            {% placeholder col_one title="Linke Spalte" type="html" %}
-                        </div>
-                        <div class="col-sm-6 
-                        {% if (this.page.title == 'Kanzlei') or 
-                                (this.page.title == 'Lo Studio') or
-                                (this.page.title == 'Advokátska kancelária') or 
-                                (this.page.title == 'The Law Firm') or
-                                (this.page.title == 'Фирма')
-                                %} text-justify {% endif %}">
-                            {% placeholder col_two title="Rechte Spalte" type="html" %}
-                        </div>
-                    </div>
-                    
-                    {% page %}
-                    <!-- End Content -->
-
-                    <!-- Footer -->
-                    <footer id="layout-footer">
-                        {% partial 'site/footer' %}
-                    </footer> <!-- End Footer -->
-
-                </div>
-        
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                {% partial 'site/sidebar-nav' %}
             </div>
 
-        </div> <!-- End Site Container -->
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+
+            <!-- Site Container -->
+            <div class="container site-container">
+
+                <div class="row">
+                            
+                    <!-- <div class="col-sm-8-5 col-sm-offset-1-5 col-xs-12 col-xs-offset-0"> -->
+                        <div class="col-xs-12 col-md-10 col-md-offset-1">
+
+                        <!-- Flash Messages -->
+                        {% flash %}
+                        <p
+                                data-control="flash-message"
+                                class="flash-message fade {{ type }}"
+                                data-interval="5">
+                            {{ message }}
+                        </p>
+                        {% endflash %}
+
+                        <!-- Header -->
+                        <header id="layout-header">
+                            {% partial 'site/header' %}
+                        </header> <!-- End Header -->
+
+                        <!-- Content -->
+                        <div class="page-header text-center">
+                            <h1 class="page-title">{{ this.page.title }}</h1>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                {% partial 'static-content/image.htm' %}
+                                {% placeholder col_one title="Linke Spalte" type="html" %}
+                            </div>
+                            <div class="col-sm-6 
+                            {% if (this.page.title == 'Kanzlei') or 
+                                    (this.page.title == 'Lo Studio') or
+                                    (this.page.title == 'Advokátska kancelária') or 
+                                    (this.page.title == 'The Law Firm') or
+                                    (this.page.title == 'Фирма')
+                                    %} text-justify {% endif %}">
+                                {% placeholder col_two title="Rechte Spalte" type="html" %}
+                            </div>
+                        </div>
+                        
+                        {% page %}
+                        <!-- End Content -->
+
+                        <!-- Footer -->
+                        <footer id="layout-footer">
+                            {% partial 'site/footer' %}
+                        </footer> <!-- End Footer -->
+
+                    </div>
             
+                </div>
+
+            </div> <!-- End Site Container -->
+        
+        </div> <!-- End Wrapper --> 
 
         <!-- Scripts -->
         <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>

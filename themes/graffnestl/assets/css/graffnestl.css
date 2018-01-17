@@ -6,15 +6,7 @@ body {
     height: 100%;
     padding-top: 0px;
     margin: 0;
-
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#faf9fc+0,dedee8+51,faf9fc+100 */
-    background: #faf9fc; /* Old browsers */
-    background: -moz-linear-gradient(-45deg, #faf9fc 0%, #dedee8 51%, #faf9fc 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, #faf9fc 0%,#dedee8 51%,#faf9fc 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, #faf9fc 0%,#dedee8 51%,#faf9fc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#faf9fc', endColorstr='#faf9fc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-    
+  
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d7e1e9+0,ffffff+51,d7e1e9+100 */
     background: #d7e1e9; /* Old browsers */
     background: -moz-linear-gradient(-45deg, #d7e1e9 0%, #ffffff 51%, #d7e1e9 100%); /* FF3.6-15 */
@@ -31,7 +23,6 @@ body {
 }
 
 body, p, h1, h2, h3, h4, h5, h6 {
-	/*color: #1C216C;*/
     color: #114B7D;
 }
 
@@ -83,16 +74,11 @@ body, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .language .btn-default {
-    /*color: #A5A7C4;*/
-    /*background-color: #ffffff;
-    border-color: #A5A7C4;*/
     color: #88A5BE;
     border-color: #88A5BE;
-    /*background-color: #88A5BE;*/
 }
 
 a {
-	/*color: #9EA0BF;*/
     color: #114B7D;
 }
 
@@ -102,7 +88,6 @@ a:hover, a:focus {
 }
 
 a.a-blue {
-    /*color: #1C216C;*/
     color: #114B7D;
 }
 
@@ -157,15 +142,11 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
 
 .btn-info {
     color: #ffffff;
-    /*background-color: #595b82;
-    border-color: #1C216C;*/
     background-color: #6087A8;
     border-color: #114B7D;
 }
 
 .btn-info:hover, .btn-info:active, .btn-info:focus {
-    /*background-color: #8e90ab;
-    border-color: #474c94;*/
     background-color: #114B7D;
     border-color: #114B7D;
 }
@@ -185,6 +166,15 @@ h1.page-title .first-letter {
 	font-size: 140%;
 }
 
+.img-center {
+    margin: 0 auto;
+}
+
+.language {
+    display: inline-block;
+    padding: 10px 0;
+}
+
 .navbar {
     position: relative;
     min-height: inherit;
@@ -202,88 +192,122 @@ h1.page-title .first-letter {
     float: none;
 }
 
-/*.navbar-nav li.active > a {
-    background-color: #7477a7;
-    color: white;
-}*/
-
 .navbar-nav > li > a {
 	text-transform: uppercase;
     color: #114B7D;
-	/*color: #1C216C;*/
 }
 
 .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a {
     text-decoration: none;
-    /*background-color: #7477a7;*/
     background-color: #6087A8;
     color: white;
 }
 
-.navbar-header .navbar-brand {
-    background-image: none;
-    background-size: inherit;
-    background-repeat: inherit;
-    background-position: inherit;
-    transition: color 0.2s ease 0.05s;
-    padding-left: 0;
-    color: inherit;
-}
-
-.navbar-header {
-    text-align: center;
-}
-
-.navbar-brand {
-    float: inherit;
-    padding: 10px 0;
-    font-size: 20px;
-    line-height: 25px;
-    height: 45px;
-}
-
-a.navbar-brand.text-center.img-center {
-    display: inline-block;
-    margin-right: -65px;
-}
-
 .nav-graffnestl {
-    /*border-bottom: 1px solid #1C216C;*/
-    /*border-top: 1px solid #1C216C;*/
     border-top: 1px solid #6087A8;
     border-bottom: 1px solid #6087A8;
 }
 
-.img-center {
-    margin: 0 auto;
-}
-
-
-.language {
-    display: inline-block;
+/*animate hamburger icon
+    https://codepen.io/designcouch/pen/Atyop
+*/
+.navbar-brand {
     padding: 10px 0;
+    font-size: 20px;
+    line-height: 25px;
+    height: 45px;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 .navbar-toggle {
+    width: 20px;
+    height: 20px;
     position: relative;
-    float: right;
-    margin-right: 15px;
-    padding: 9px 10px;
-    margin-top: 3px;
-    margin-bottom: 18px;
-    background-color: transparent;
-    background-image: none;
-    border: 1px solid transparent;
-    border-radius: 4px;
+    margin: 25px 20px 20px 20px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.navbar-toggle .icon-bar + .icon-bar {
+    margin-top: 0px;
 }
 
 .navbar-toggle .icon-bar {
     display: block;
-    width: 22px;
-    height: 2px;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: #114B7D;
     border-radius: 1px;
-    /*background-color: #1c216c;*/
-    background-color: #114B7D;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+.navbar-toggle .icon-bar:nth-child(2) {
+    top: 0px;
+}
+
+.navbar-toggle .icon-bar:nth-child(3) {
+    top: 5px;
+}
+
+.navbar-toggle .icon-bar:nth-child(4) {
+    top: 10px;
+}
+
+.navbar-toggle.active .icon-bar:nth-child(2) {
+    top: 5px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.navbar-toggle.active .icon-bar:nth-child(3) {
+    opacity: 0;
+    left: -60px;
+}
+
+.navbar-toggle.active .icon-bar:nth-child(4) {
+    top: 5px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+}
+
+#sidebar-wrapper {
+    background-color: #0B3253;
+}
+
+.sidebar-nav li a{
+    color: white;
+    text-transform: uppercase;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: white;
+    text-transform: inherit;
+}
+
+.navbar-toggle.active .icon-bar {
+    background: white;
 }
 
 
@@ -322,7 +346,18 @@ a.navbar-brand.text-center.img-center {
     a.navbar-brand.text-center.img-center {
         display: inline-block;
         margin-right: 0;
-        width: 75%;
+        width: 59%;
+        padding: 0;
+        font-size: 16px;
+        line-height: 25px;
+        height: 45px;
+        margin-left: inherit;
+        transform: inherit;
+        margin-top: -16px;
+    }
+
+    .navbar-toggle {
+        margin: 29px 28px 20px 20px;
     }
 
     .navbar-nav {
@@ -331,6 +366,10 @@ a.navbar-brand.text-center.img-center {
 
     .navbar-nav > li {
         display: block;
+    }
+
+    .sidebar-nav > .sidebar-brand a {
+        margin-top: 4px;
     }
 
     h1.page-title {
@@ -423,21 +462,9 @@ legend {
 
 .nav > li > a:hover, .nav > li > a:focus {
     text-decoration: none;
-    /*background-color: #7477a7;*/
     background-color: #6087A8;
     color: white;
 }
-
-/*.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a {
-    background: transparent;
-    color: inherit;
-}*/
-
-/*.navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a {
-    text-decoration: none;
-    background-color: #7477a7;
-    color: white;
-}*/
 
 .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a {
      transition: none; 
@@ -463,7 +490,6 @@ legend {
 
 .overlay {
   display: block;
-  /*background: rgba(42, 46, 107, 0.85);*/
   background: #56758FCC;
   text-align: center;
   padding: 66px 40px 203px 40px;
@@ -478,7 +504,6 @@ legend {
 }
 
 .interleges_text {
-    /*background: #ffffffb3;*/
     background: -moz-linear-gradient(left, rgba(255,255,255,0.7) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.7) 99%, rgba(255,255,255,0.7) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(left, rgba(255,255,255,0.7) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0.7) 99%,rgba(255,255,255,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right, rgba(255,255,255,0.7) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0.7) 99%,rgba(255,255,255,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -492,11 +517,34 @@ legend {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display:         flex;
+  display: flex;
   flex-wrap: wrap;
 }
 .flex-row > [class*='col-'] {
   display: flex;
   flex-direction: column;
+  position: inherit;
+  float: none;
 }
+
+.photocredit {
+    position: absolute;
+    bottom: 0;
+    padding: 0 7px;
+    right: 0;
+    margin-right: 15px;
+    color: white;
+}
+
+.box:hover > .photocredit.hidden {
+    display: inherit !important;
+}
+
+.required > label::after {
+    content: ' *';
+    color: red;
+}
+
+
+
 

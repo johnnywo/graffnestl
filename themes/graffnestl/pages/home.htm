@@ -54,7 +54,7 @@ layout = "frontpage"
 
         <div class="img-hover-container hidden-xs">
             <a href="{{ url('/fachgebiete'|_) }}" class="overlay">
-                <div class="text">
+                <div id="zitat" class="text">
                             <h4 style="line-height: 1.4;">
                                 <b>Aurea prima sata est aetas, quae vindice nullo,
                                             sponte sua, sine lege fidem rectumque colebat.
@@ -68,9 +68,12 @@ layout = "frontpage"
             </a>
         </div>
 
-        <a href="{{ url('/fachgebiete'|_) }}" class="hidden-sm hidden-md hidden-lg">
-            <img src="{{ 'assets/images/GNBX-0283.jpg'|theme }}" alt="Graff Nestl & Partner Rechtsanwälte" class="img-responsive">
-        </a>
+        <div class="hidden-sm hidden-md hidden-lg">
+            <a href="{{ url('/fachgebiete'|_) }}">
+                <img src="{{ 'assets/images/GNBX-0283.jpg'|theme }}" alt="Graff Nestl & Partner Rechtsanwälte" class="img-responsive">
+            </a>
+            <div id="zitatXs"></div>
+        </div>
 
 
     </div>

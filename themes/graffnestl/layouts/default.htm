@@ -17,38 +17,61 @@ description = "Default layout"
         <link href="{{ [
             'assets/css/vendor.css',
             'assets/css/theme.css',
+            'assets/css/simple-sidebar.css',
             'assets/css/graffnestl.css'
             ]|theme }}" rel="stylesheet"> 
         {% styles %}
     </head>
     <body>
-        
-        <!-- Site Container -->
-        <div class="container site-container">
 
-            <div class="row">
-                        
-                <div class="col-xs-12 col-md-10 col-md-offset-1">
-                    
-                    <!-- Header -->
-                    <header id="layout-header">
-                        {% partial 'site/header' %}
-                    </header> <!-- End Header -->
-                    
-                    <!-- Content -->
-                    {% page %}
-                    <!-- End Content -->
+        <div id="wrapper">
 
-                    <!-- Footer -->
-                    <footer id="layout-footer">
-                        {% partial 'site/footer' %}
-                    </footer> <!-- End Footer -->
-
-                </div>
-        
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                {% partial 'site/sidebar-nav' %}
             </div>
 
-        </div> <!-- End Site Container -->
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <!-- Site Container -->
+                <div class="container site-container">
+
+                    <div class="row">
+                                
+                        <div class="col-xs-12 col-md-10 col-md-offset-1">
+                            
+                            <!-- Flash Messages -->
+                            {% flash %}
+                            <p
+                                    data-control="flash-message"
+                                    class="flash-message fade {{ type }}"
+                                    data-interval="5">
+                                {{ message }}
+                            </p>
+                            {% endflash %}
+
+                            <!-- Header -->
+                            <header id="layout-header">
+                                {% partial 'site/header' %}
+                            </header> <!-- End Header -->
+                            
+                            <!-- Content -->
+                            {% page %}
+                            <!-- End Content -->
+
+                            <!-- Footer -->
+                            <footer id="layout-footer">
+                                {% partial 'site/footer' %}
+                            </footer> <!-- End Footer -->
+
+                        </div>
+                
+                    </div>
+
+                </div> <!-- End Site Container -->
+            </div> <!-- End Page Content Wrapper -->
+            
+        </div>
 
         <!-- Scripts -->
         <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>

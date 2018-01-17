@@ -41,9 +41,13 @@ items:
             isExternal: '0'
     -
         title: 'News & Publikationen'
+        nesting: ''
         type: cms-page
+        url: ''
         code: ''
         reference: news
+        cmsPage: ''
+        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''

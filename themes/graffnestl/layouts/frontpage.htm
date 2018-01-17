@@ -19,35 +19,58 @@ code = "main-menu"
         <link href="{{ [
             'assets/css/vendor.css',
             'assets/css/theme.css',
+            'assets/css/simple-sidebar.css',
             'assets/css/graffnestl.css'
-            ]|theme }}" rel="stylesheet"> 
+            ]|theme }}" rel="stylesheet">
         {% styles %}
     </head>
     <body>
-        
-        <!-- Site Container -->
-        <div class="container site-container">
 
-            <div class="row">
-                        
-                <!-- <div class="col-sm-8-5 col-sm-offset-1-5 col-xs-12 col-xs-offset-0"> -->
-                    <div class="col-xs-12 col-md-10 col-md-offset-1">
-                    
-                    <!-- Content -->
-                    {% page %}
-                    <!-- End Content -->
+        <div id="wrapper">
 
-                    <!-- Footer -->
-                    <footer id="layout-footer">
-                        {% partial 'site/footer' %}
-                    </footer> <!-- End Footer -->
-
-                </div>
-        
+            <!-- Sidebar -->
+            <div id="sidebar-wrapper">
+                {% partial 'site/sidebar-nav' %}
             </div>
 
-        </div> <!-- End Site Container -->
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+        
+            <!-- Site Container -->
+            <div class="container site-container">
 
+                <div class="row">
+
+                    <!-- Flash Messages -->
+                    {% flash %}
+                    <p
+                            data-control="flash-message"
+                            class="flash-message fade {{ type }}"
+                            data-interval="5">
+                        {{ message }}
+                    </p>
+                    {% endflash %}
+                            
+                    <!-- <div class="col-sm-8-5 col-sm-offset-1-5 col-xs-12 col-xs-offset-0"> -->
+                    <div class="col-xs-12 col-md-10 col-md-offset-1">
+                        
+                        <!-- Content -->
+                        {% page %}
+                        <!-- End Content -->
+
+                        <!-- Footer -->
+                        <footer id="layout-footer">
+                            {% partial 'site/footer' %}
+                        </footer> <!-- End Footer -->
+
+                    </div>
+            
+                </div>
+
+            </div> <!-- End Site Container -->
+
+        </div> <!-- End Wrapper -->
+        
         <!-- Scripts -->
         <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
         <script src="{{ 'assets/vendor/bootstrap.js'|theme }}"></script>

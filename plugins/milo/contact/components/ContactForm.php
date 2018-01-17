@@ -101,9 +101,10 @@ class ContactForm extends ComponentBase
 
                     $message->from(Input::get('email'), Input::get('name'));
                     $message->to('office@graffnestl.com', 'Graff Nestl & Partner Rechtsanwälte');
+                    //$message->cc(Input::get('email'), Input::get('name'));
                     $message->bcc([
                         Input::get('email') => Input::get('name'), 
-                        'emil@zeero.at' => 'Milo' 
+                        'emil.esletzbichler@gmail.com' => 'Emil' 
                     ]);
                     $message->subject(Input::get('subject'));
 
@@ -112,7 +113,7 @@ class ContactForm extends ComponentBase
                     }
                 });
 
-                Flash::success('Nachricht übermittelt!');
+                Flash::success('Ihre Nachricht wurde soeben gesendet!');
                 return Redirect::back();
 
             } // End if antispam test was negativ.
