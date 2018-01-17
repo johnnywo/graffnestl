@@ -358,6 +358,9 @@ h1.page-title .first-letter {
 
     .navbar-toggle {
         margin: 29px 28px 20px 20px;
+        width: 25px;
+        height: 25px;
+        z-index: 9999;
     }
 
     .navbar-nav {
