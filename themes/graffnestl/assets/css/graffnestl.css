@@ -153,7 +153,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
 
 .border-1, .oc-img-bordered {
 	padding: 2px;
-	border: 1px solid #C3C7FE;
+	border: 1px solid #D6E4F3;
 }
 
 h1.page-title{
@@ -573,6 +573,39 @@ legend {
 #page-content-wrapper {
     padding: 15px 0 15px 0;
 }
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #114B7D;
+  border-radius: 4px;
+}
+
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #114B7D;
+}
+
+.tooltip.top-left .tooltip-arrow {
+  bottom: 0;
+  right: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #114B7D;
+}
+.tooltip.top-right .tooltip-arrow {
+  bottom: 0;
+  left: 5px;
+  margin-bottom: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #114B7D;
+}
+
 
 
 

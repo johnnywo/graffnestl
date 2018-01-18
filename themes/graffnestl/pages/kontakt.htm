@@ -17,7 +17,15 @@ localeUrl[sk] = "/kontakt"
 
 <div class="row">
 	<div class="col-sm-6">
-		<a href="https://www.google.at/maps/place/Graff+Nestl+%26+Partner+Rechtsanw%C3%A4lte+GmbH/@48.2017554,16.3681494,17z/data=!4m5!3m4!1s0x476d079ce7acdec1:0xdd175a4e45161c8e!8m2!3d48.2017518!4d16.3703434" target="_blank">
+		<a 
+			href="https://www.google.at/maps/place/Graff+Nestl+%26+Partner+Rechtsanw%C3%A4lte+GmbH/@48.2017554,16.3681494,17z/data=!4m5!3m4!1s0x476d079ce7acdec1:0xdd175a4e45161c8e!8m2!3d48.2017518!4d16.3703434" 
+			target="_blank" 
+			alt="Google Maps Graff Nestl" 
+			title="{{ 'gehe zum Standort Graff Nestl & Partner in Google Maps'|_ }}"
+			data-toggle="tooltip"
+		    data-placement="top"
+		    data-delay="250"
+			>
 			<img src="{{ 'assets/images/graffnestl-map-snazzy-1.jpg'|theme }}" alt="Graff Nestl & Partner Rechtsanwälte Map" class="img-responsive">
 		</a>
 	</div>
@@ -34,7 +42,7 @@ localeUrl[sk] = "/kontakt"
 		{{ form_open({ request: 'onSubmitContactForm', files: true }) }}
 
 		    <legend>{{ 'Schreiben Sie uns eine Nachricht:'|_ }}</legend>
-			<p>Eine Kopie der Nachricht wird an Sie versendet. <br> Mit einem rotem Stern gekennzeichnete Felder sind Pflichtfelder.</p> <br>
+			<p>{{ 'Eine Kopie der Nachricht wird an Sie versendet.'|_ }} <br>{{ 'Mit einem rotem Stern gekennzeichnete Felder sind Pflichtfelder.'|_ }} </p> <br>
 		    <div class="form-group required">
 		        <label for="name">
 		            {{ 'Name'|_ }}
