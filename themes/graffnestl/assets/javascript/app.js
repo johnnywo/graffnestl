@@ -65,8 +65,9 @@ jQuery(document).ready(function($){
     });
 
     // /: show Overlay Text for Mobile Devices after Hero Image
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-       $("#zitatXs").append( $( "#zitat" ) );
+    var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+    if (isMobile.matches) {
+        $("#zitatXs").append( $( "#zitat" ) );
     }
 
 });

@@ -12,7 +12,7 @@ code = "main-menu"
             <li role="presentation" class="{{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }} {{ item.viewBag.cssClass }}">
                 {% if item.url %}
                     <a href="{{ item.url }}" {{ item.viewBag.isExternal ? 'target="_blank"' }}>
-                        {{ item.title|_ }}
+                        {{ str_limit(item.title|_,20) }}
                     </a>
                 {% else %}
                     <span>{{ item.title|_ }}</span>
@@ -25,18 +25,29 @@ code = "main-menu"
         {% endfor %}
     {% endif %}
 
-    <!-- Start Language Picker -->
-    <div class="language hidden-sm hidden-md hidden-lg">
+    <hr style="border-top: 1px solid rgba(255,255,255,.2);">
+    <li>{{ 'Sprachen'|_ }}:</li>
+    <li>
+        <a class="languages" href="#" data-request="onSwitchLocale" data-request-data="locale: 'de'">
+        <img src="{{ 'assets/images/country-flags/Germany.png'|theme }}" alt="Deutsch" title="Deutsch">
+         deutsch</a></li>
+    <li>
+        <a class="languages" href="#" data-request="onSwitchLocale" data-request-data="locale: 'en'">
+        <img src="{{ 'assets/images/country-flags/United_Kingdom.png'|theme }}" alt="English" title="English"> 
+        english</a></li>
+    <li>
+        <a class="languages" href="#" data-request="onSwitchLocale" data-request-data="locale: 'ru'"> 
+        <img src="{{ 'assets/images/country-flags/Russian_Federation.png'|theme }}" alt="Russisch" title="Russisch">
+        russian</a></li>
+    <li>
+        <a class="languages" href="#" data-request="onSwitchLocale" data-request-data="locale: 'sk'">
+        <img src="{{ 'assets/images/country-flags/Slovakia.png'|theme }}" alt="Slovakisch" title="Slovakisch">
+         slovak</a></li>
+    <li>
+        <a class="languages" href="#" data-request="onSwitchLocale" data-request-data="locale: 'it'">
+        <img src="{{ 'assets/images/country-flags/Italy.png'|theme }}" alt="Italienisch" title="Italienisch">
+         italian</a></li>
 
-             {{ form_open() }}
-                 <select name="locale" data-request="onSwitchLocale" class="selectpicker">
-                     {% for code, name in locales %}
-                         <option value="{{ code }}" {{ code == activeLocale ? 'selected' }}>{{ code|upper }}</option>
-                     {% endfor %}
-                 </select>
 
-             {{ form_close() }}
-
-     </div> <!-- End Language Picker -->
 
 </ul>

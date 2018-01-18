@@ -296,9 +296,22 @@ h1.page-title .first-letter {
     background-color: #0B3253;
 }
 
+.sidebar-nav {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.sidebar-nav li {
+    color: white;
+}
+
 .sidebar-nav li a{
     color: white;
     text-transform: uppercase;
+}
+
+.sidebar-nav li a.languages {
+    text-transform: inherit;
 }
 
 .sidebar-nav > .sidebar-brand a {
@@ -382,6 +395,11 @@ h1.page-title .first-letter {
     h1.page-title {
         font-size: 32px;
     }
+
+    .language .btn {
+
+    }
+
 }
 
 div.list-unstyled ul {
