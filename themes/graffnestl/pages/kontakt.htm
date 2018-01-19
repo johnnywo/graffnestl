@@ -17,82 +17,88 @@ localeUrl[sk] = "/kontakt"
 
 <div class="row">
 	<div class="col-sm-6">
-		<a 
-			href="https://www.google.at/maps/place/Graff+Nestl+%26+Partner+Rechtsanw%C3%A4lte+GmbH/@48.2017554,16.3681494,17z/data=!4m5!3m4!1s0x476d079ce7acdec1:0xdd175a4e45161c8e!8m2!3d48.2017518!4d16.3703434" 
-			target="_blank" 
-			alt="Google Maps Graff Nestl" 
-			title="{{ 'gehe zum Standort Graff Nestl & Partner in Google Maps'|_ }}"
-			data-toggle="tooltip"
-		    data-placement="top"
-		    data-delay="250"
-			>
-			<img src="{{ 'assets/images/graffnestl-map-snazzy-1.jpg'|theme }}" alt="Graff Nestl & Partner Rechtsanwälte Map" class="img-responsive">
-		</a>
-	</div>
-	<div class="col-sm-6">
 		<h4 class="m-b-sm">Graff Nestl & Partner | Rechtsanwälte</h4> 
 		<p>Kärntner Ring 4, A-1010 Wien</p>
 
-		<p class="m-b-lg">
+		<p class="m-b-md">
 			T +43 (1) 533 66 61-0 <br>
 			F +43 (1) 533 66 61-10 <br>
 			E <a href="mailto: {{ html_email('office@graffnestl.com')|raw }}">office@graffnestl.com</a>
-		</p>
-
-		{{ form_open({ request: 'onSubmitContactForm', files: true }) }}
-
-		    <legend>{{ 'Schreiben Sie uns eine Nachricht:'|_ }}</legend>
-			<p>{{ 'Eine Kopie der Nachricht wird an Sie versendet.'|_ }} <br>{{ 'Mit einem rotem Stern gekennzeichnete Felder sind Pflichtfelder.'|_ }} </p> <br>
-		    <div class="form-group required">
-		        <label for="name">
-		            {{ 'Name'|_ }}
-		        </label>
-		        <input type="text" name="name" class="form-control" value="{{ form_value('name') }}" required="required">
-		        <p style="color:red;">{{ errors.first('name') }}</p>
-		    </div>
-
-		    <div class="form-group required">
-		        <label for="email">
-		            {{ 'E-Mail'|_ }}
-		        </label>
-		        <input type="text" name="email" class="form-control" value="{{ form_value('email') }}" required="required">
-		  		<p style="color:red;">{{ errors.first('email') }}</p>
-		    	
-		    </div>
-
-		    <div class="form-group">
-		        <label for="subject">
-		            {{ 'Betreff'|_ }}
-		        </label>
-		        <input type="text" name="subject" class="form-control" value="{{ form_value('subject') }}">
-		    </div>
-
-		    <div class="antispam">Leave this empty:
-		        <input type="text" name="url">
-		    </div>
-
-		    <div class="form-group required">
-		        <label for="message">
-		            {{ 'Nachricht'|_ }}
-		        </label>
-		        <textarea class="form-control" rows="4" name="message" value="{{ form_value('message') }}"></textarea>
-		    </div>
-
-		    <div class="form-group">
-		    	<label for="file-upload" class="custom-file-upload">
-		            <i class="icon-cloud-upload"></i> {{ 'Datei Upload'|_ }}
-		        </label>
-		        <span id="file-selected"></span>
-		    	<input id="file-upload" type="file" name="file">
-		    	<p style="color:red;">{{ errors.first('file') }}</p>
-		    </div>
-
-		    <div class="form-group">
-		        <button id="submit" type="submit" class="btn btn-info">
-		            {{ 'Absenden'|_ }}
-		        </button>
-		    </div>
-
-		{{ form_close() }}
+		</p>	
 	</div>
 </div>
+<div class="row">
+	<div class="col-sm-12">
+		<iframe src="https://snazzymaps.com/embed/42043" width="100%" height="400px" style="border:none;"></iframe>
+	</div>
+</div>
+
+{{ form_open({ request: 'onSubmitContactForm', files: true }) }}
+<div class="row">
+	<div class="col-sm-12 m-t-md">
+	    <legend>{{ 'Schreiben Sie uns eine Nachricht:'|_ }}</legend>
+		<p>{{ 'Eine Kopie der Nachricht wird an Sie versendet.'|_ }} <br>{{ 'Mit einem rotem Stern gekennzeichnete Felder sind Pflichtfelder.'|_ }} </p> <br>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6">
+		<div class="form-group required">
+		    <label for="name">
+		        {{ 'Name'|_ }}
+		    </label>
+		    <input type="text" name="name" class="form-control" value="{{ form_value('name') }}" required="required">
+		    <p style="color:red;">{{ errors.first('name') }}</p>
+		</div>
+	</div>
+	<div class="col-sm-6">
+		  <div class="form-group required">
+		      <label for="email">
+		          {{ 'E-Mail'|_ }}
+		      </label>
+		      <input type="text" name="email" class="form-control" value="{{ form_value('email') }}" required="required">
+				<p style="color:red;">{{ errors.first('email') }}</p> 	
+		  </div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6">
+		<div class="form-group">
+		    <label for="subject">
+		        {{ 'Betreff'|_ }}
+		    </label>
+		    <input type="text" name="subject" class="form-control" value="{{ form_value('subject') }}">
+		</div>
+	</div>
+	<div class="col-sm-6">
+		<div class="antispam">Leave this empty:
+		    <input type="text" name="url">
+		</div>
+
+		<div class="form-group required">
+		    <label for="message">
+		        {{ 'Nachricht'|_ }}
+		    </label>
+		    <textarea class="form-control" rows="4" name="message" value="{{ form_value('message') }}"></textarea>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-6">
+		<div class="form-group">
+			<label for="file-upload" class="custom-file-upload">
+		        <i class="icon-cloud-upload"></i> {{ 'Datei Upload'|_ }}
+		    </label>
+		    <span id="file-selected"></span>
+			<input id="file-upload" type="file" name="file">
+			<p style="color:red;">{{ errors.first('file') }}</p>
+		</div>
+
+		<div class="form-group">
+		    <button id="submit" type="submit" class="btn btn-info">
+		        {{ 'Absenden'|_ }}
+		    </button>
+		</div>
+	</div>
+</div>
+{{ form_close() }}
+
