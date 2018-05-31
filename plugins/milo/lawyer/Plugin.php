@@ -86,7 +86,7 @@ class Plugin extends PluginBase
                 'url'         => Backend::url('milo/lawyer/lawyers'),
                 'icon'        => 'icon-graduation-cap',
                 'permissions' => ['milo.lawyer.*'],
-                'order'       => 500,
+                'order'       => 400,
             ],
         ];
     }

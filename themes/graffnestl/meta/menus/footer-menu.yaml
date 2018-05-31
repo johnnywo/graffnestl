@@ -4,8 +4,10 @@ items:
         title: Impressum
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: impressum
+        cmsPage: ''
         replace: '0'
         viewBag:
             isHidden: '0'
@@ -15,8 +17,21 @@ items:
         title: AGB
         nesting: '0'
         type: static-page
+        url: ''
         code: ''
         reference: agb
+        cmsPage: ''
+        replace: '0'
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Datenschutzerklärung
+        nesting: '0'
+        type: static-page
+        code: ''
+        reference: datenschutzerklaerung
         replace: '0'
         viewBag:
             isHidden: '0'

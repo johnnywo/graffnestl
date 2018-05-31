@@ -92,7 +92,7 @@ class Plugin extends PluginBase
                 'url'         => Backend::url('milo/interleges/partners'),
                 'icon'        => 'icon-leaf',
                 'permissions' => ['milo.interleges.*'],
-                'order'       => 500,
+                'order'       => 450,
             ],
         ];
     }
