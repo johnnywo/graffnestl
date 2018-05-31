@@ -83,7 +83,7 @@ localeUrl[sk] = "/kontakt"
 	</div>
 </div>
 <div class="row">
-	<div class="col-sm-6">
+	<div class="col-sm-12">
 		<div class="form-group">
 			<label for="file-upload" class="custom-file-upload">
 		        <i class="icon-cloud-upload"></i> {{ 'Datei Upload'|_ }}
@@ -92,7 +92,22 @@ localeUrl[sk] = "/kontakt"
 			<input id="file-upload" type="file" name="file">
 			<p style="color:red;">{{ errors.first('file') }}</p>
 		</div>
-
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
+		<div class="form-group">
+			<div class="checkbox">
+			  <label>
+			    <input type="checkbox" id="dse" required="required">
+			    ich habe die <a href="/datenschutzerklaerung" class="colorbox-load">Datenschutzerklärung</a> gelesen und bin einverstanden, dass meine E-Mail zur Kontaktaufnahme durch uns verwendet wird.
+			  </label>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12">
 		<div class="form-group">
 		    <button id="submit" type="submit" class="btn btn-info">
 		        {{ 'Absenden'|_ }}
@@ -100,5 +115,6 @@ localeUrl[sk] = "/kontakt"
 		</div>
 	</div>
 </div>
+
 {{ form_close() }}
 
