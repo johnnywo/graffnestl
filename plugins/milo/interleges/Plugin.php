@@ -71,12 +71,10 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
-
         return [
             'milo.interleges.some_permission' => [
                 'tab' => 'Interleges',
-                'label' => 'Some permission'
+                'label' => 'Verwalte die Kooperationspartner Interleges Group'
             ],
         ];
     }
