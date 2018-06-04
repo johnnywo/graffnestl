@@ -1,8 +1,12 @@
 description = "Frontpage layout"
 
 [localePicker]
+forceUrl = 0
+
 [staticMenu]
 code = "main-menu"
+
+[googleTracker]
 ==
 <!DOCTYPE html>
 <html>
@@ -62,6 +66,7 @@ code = "main-menu"
                         <footer id="layout-footer">
                             {% partial 'site/footer' %}
                         </footer> <!-- End Footer -->
+                        
 
                     </div>
             
@@ -70,6 +75,8 @@ code = "main-menu"
             </div> <!-- End Site Container -->
 
         </div> <!-- End Wrapper -->
+        
+         {% component 'googleTracker' %}
 
         <!-- Scripts -->
         <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>

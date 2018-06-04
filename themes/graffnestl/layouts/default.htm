@@ -1,6 +1,9 @@
 description = "Default layout"
 
 [localePicker]
+forceUrl = 0
+
+[googleTracker]
 ==
 <!DOCTYPE html>
 <html>
@@ -63,6 +66,7 @@ description = "Default layout"
                             <footer id="layout-footer">
                                 {% partial 'site/footer' %}
                             </footer> <!-- End Footer -->
+                            
 
                         </div>
                 
@@ -72,6 +76,8 @@ description = "Default layout"
             </div> <!-- End Page Content Wrapper -->
             
         </div>
+        
+        {% component 'googleTracker' %}
 
         <!-- Scripts -->
         <script src="{{ 'assets/vendor/jquery.js'|theme }}"></script>
