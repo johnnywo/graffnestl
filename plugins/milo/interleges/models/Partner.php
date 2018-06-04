@@ -7,6 +7,8 @@ use Model;
  */
 class Partner extends Model
 {
+    use \October\Rain\Database\Traits\Sortable;
+
     /**
      * @var string The database table used by the model.
      */

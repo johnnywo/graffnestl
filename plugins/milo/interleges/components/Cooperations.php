@@ -21,6 +21,7 @@ class Cooperations extends ComponentBase
     public function partner()
     {
         $partner = Partner::all();
+        $partner->sortBy('sort_order');
         return $partner;
     }
 }
