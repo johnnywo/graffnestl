@@ -71,7 +71,7 @@ class ContactForm extends ComponentBase
         }
 
         if ($validator->fails()) {
-            Flash::error('Uups, es ist ein Fehler passiert.');
+            Flash::error('Sorry, es ist ein Fehler passiert.');
             return Redirect::back()->withErrors($validator);
 
         } else {
@@ -113,7 +113,7 @@ class ContactForm extends ComponentBase
                     }
                 });
 
-                Flash::success('Ihre Nachricht wurde soeben gesendet!');
+                Flash::success('Ihre Nachricht wurde soeben übermittelt!');
                 return Redirect::back();
 
             } // End if antispam test was negativ.
