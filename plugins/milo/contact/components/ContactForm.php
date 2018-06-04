@@ -97,15 +97,12 @@ class ContactForm extends ComponentBase
                     'file' => $newContact->file
                 ];
 
-                Mail::send('milo.contact::mail.message', $vars, function ($message) use ($vars) {
+                Mail::queue('milo.contact::mail.message', $vars, function ($message) use ($vars) {
 
                     $message->from(Input::get('email'), Input::get('name'));
                     $message->to('office@graffnestl.com', 'Graff Nestl & Partner Rechtsanwälte');
-                    //$message->cc(Input::get('email'), Input::get('name'));
-                    $message->bcc([
-                        Input::get('email') => Input::get('name'), 
-                        'emil.esletzbichler@gmail.com' => 'Emil' 
-                    ]);
+                    $message->cc(Input::get('email'), Input::get('name'));
+                    //$message->bcc('emil.esletzbichler@gmail.com', 'Emil');
                     $message->subject(Input::get('subject'));
 
                     if ( Input::file('file') ) {
