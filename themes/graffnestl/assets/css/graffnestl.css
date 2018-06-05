@@ -606,6 +606,10 @@ legend {
   border-top-color: #114B7D;
 }
 
+.jumbotron {
+    background-color: inherit;
+}
+
 
 
 
