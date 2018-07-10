@@ -100,7 +100,7 @@ class ContactForm extends ComponentBase
                 Mail::queue('milo.contact::mail.message', $vars, function ($message) use ($vars) {
 
                     $message->from('web@graffnestl.com', 'Graff Nestl & Partner Rechtsanwälte');
-                    $message->replyTo(Input::get('email'), Input::get('name'));
+                    //$message->replyTo(Input::get('email'), Input::get('name'));
                     //$message->to('emil.esletzbichler@icloud.com', 'Emil');
                     $message->to('office@graffnestl.com', 'Graff Nestl & Partner Rechtsanwälte');
                     $message->cc(Input::get('email'), Input::get('name'));
