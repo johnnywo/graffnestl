@@ -91,6 +91,7 @@ localeUrl[sk] = "/kontakt"
 		    <span id="file-selected"></span>
 			<input id="file-upload" type="file" name="file">
 			<p style="color:red;">{{ errors.first('file') }}</p>
+			<p class="help-block">({{ 'erlaubte Dateien'|_ }}: jpeg, png, gif, pdf. {{ 'Maximale Dateigröße'|_ }}: 2MB.)</p>
 		</div>
 	</div>
 </div>
