@@ -46,7 +46,7 @@ localeUrl[sk] = "/kontakt"
 		    <label for="name">
 		        {{ 'Name'|_ }}
 		    </label>
-		    <input type="text" name="name" class="form-control" value="{{ form_value('name') }}" required="required">
+		    <input id="contact_name" type="text" name="name" class="form-control" value="{{ form_value('name') }}" required="required">
 		    <p style="color:red;">{{ errors.first('name') }}</p>
 		</div>
 	</div>

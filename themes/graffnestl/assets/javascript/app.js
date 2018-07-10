@@ -70,5 +70,7 @@ jQuery(document).ready(function($){
         $("#zitatXs").append( $( "#zitat" ) );
     }
 
+    $("#contact_name").focus();
+
 });
 
