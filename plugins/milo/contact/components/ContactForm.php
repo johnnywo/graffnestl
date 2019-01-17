@@ -77,6 +77,7 @@ class ContactForm extends ComponentBase
         } else {
 
             /*Spam Check*/
+            //dd(Input::get('dog'));
             $url = Input::get('dog');
 
             if (isset($url) && $url == '') {
