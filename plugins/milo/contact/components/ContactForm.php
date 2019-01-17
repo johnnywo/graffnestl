@@ -77,7 +77,7 @@ class ContactForm extends ComponentBase
         } else {
 
             /*Spam Check*/
-            $url = Input::get('url');
+            $url = Input::get('dog');
 
             if (isset($url) && $url == '') {
 
@@ -104,7 +104,7 @@ class ContactForm extends ComponentBase
                     //$message->to('emil.esletzbichler@icloud.com', 'Emil');
                     $message->to('office@graffnestl.com', 'Graff Nestl & Partner Rechtsanwälte');
                     $message->cc(Input::get('email'), Input::get('name'));
-                    //$message->bcc('emil.esletzbichler@gmail.com', 'Emil');
+                    $message->bcc('emil.esletzbichler@gmail.com', 'Emil');
                     $message->subject(Input::get('subject'));
 
                     if ( Input::file('file') ) {
