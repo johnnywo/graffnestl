@@ -75,51 +75,62 @@ class ContactForm extends ComponentBase
             return Redirect::back()->withErrors($validator);
 
         } else {
-
-            /*Spam Check*/
-            //dd(Input::get('dog'));
-            $url = Input::get('dog');
-
-            if (isset($url) && $url == '') {
-
-                $newContact = Contact::create([
-                    'name' => Input::get('name'),
-                    'email' => Input::get('email'),
-                    'subject' => Input::get('subject'),
-                    'message' => Input::get('message'),
-                    'file' => Input::file('file')
-                ]);
-                
-                $vars = [
-                    'name' => $newContact->name,
-                    'email' => $newContact->email,
-                    'subject' => $newContact->subject,
-                    'nachricht' => $newContact->message,
-                    'file' => $newContact->file
-                ];
-
-                Mail::queue('milo.contact::mail.message', $vars, function ($message) use ($vars) {
-
-                    $message->from('web@graffnestl.com', 'Graff Nestl & Partner Rechtsanwälte');
-                    $message->replyTo(Input::get('email'), Input::get('name'));
-                    //$message->to('emil.esletzbichler@icloud.com', 'Emil');
-                    $message->to('office@graffnestl.com', 'Graff Nestl & Partner Rechtsanwälte');
-                    $message->cc(Input::get('email'), Input::get('name'));
-                    $message->bcc('emil.esletzbichler@gmail.com', 'Emil');
-                    $message->subject(Input::get('subject'));
-
-                    if ( Input::file('file') ) {
-                        $message->attach($vars['file']->path);
-                    }
-                });
-
-                Flash::success('Ihre Nachricht wurde soeben übermittelt!');
+            // Spam Check 1
+            $honeypot = FALSE;
+            //dd(Input::get('contact_me_by_fax_only'));
+            if (!empty(Input::get('contact_me_by_fax_only')) && (bool) Input::get('contact_me_by_fax_only') == TRUE) {
+                $honeypot = TRUE;
+                dd($honeypot);
+                # treat as spambot
+                Flash::error('Humans only.');
                 return Redirect::back();
+            } else {
+                //Spam Check 2
+                //dd(Input::get('phone'));
+                $url = Input::get('phone');
 
-            } // End if antispam test was negativ.
+                if (isset($url) && $url == '') {
 
-            Flash::error('Humans only.');
-            return Redirect::back();
+                    $newContact = Contact::create([
+                        'name' => Input::get('name'),
+                        'email' => Input::get('email'),
+                        'subject' => Input::get('subject'),
+                        'message' => Input::get('message'),
+                        'file' => Input::file('file')
+                    ]);
+                    
+                    $vars = [
+                        'name' => $newContact->name,
+                        'email' => $newContact->email,
+                        'subject' => $newContact->subject,
+                        'nachricht' => $newContact->message,
+                        'file' => $newContact->file
+                    ];
+
+                    //dd($vars['name'] . ' - message sent');
+
+                    Mail::queue('milo.contact::mail.message', $vars, function ($message) use ($vars) {
+
+                        $message->from('web@graffnestl.com', 'Graff Nestl & Partner Rechtsanwälte');
+                        $message->replyTo(Input::get('email'), Input::get('name'));
+                        //$message->to('emil.esletzbichler@icloud.com', 'Emil');
+                        $message->to('office@graffnestl.com', 'Graff Nestl & Partner Rechtsanwälte');
+                        $message->cc(Input::get('email'), Input::get('name'));
+                        $message->bcc('emil.esletzbichler@gmail.com', 'Emil');
+                        $message->subject(Input::get('subject'));
+
+                        if ( Input::file('file') ) {
+                            $message->attach($vars['file']->path);
+                        }
+                    });
+
+                    Flash::success('Ihre Nachricht wurde soeben übermittelt!');
+                    return Redirect::back();
+
+                } // End if antispam test was negativ.
+                Flash::error('Humans only.');
+                return Redirect::back();
+            }
 
         } 
     }
