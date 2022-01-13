@@ -15,7 +15,23 @@ localeUrl[sk] = "/advokati-a-pravni-spolupracovnici"
     <h1 class="page-title">{{ this.page.title|_ }}</h1>
 </div>
 
-<div class="row flex-row">
+<div class="row">
+	<p class="m-b-lg m-t-lg">
+		{{ 'In den Kanzleiräumlichkeiten des Kärntner Ring 4 sind nachfolgende, <br>
+		selbstständige, unabhängige Rechtsanwälte/Rechtsanwaltskanzleien etabliert:'|_ }}
+	</p>
+
+	<ul class="m-b-lg" style="font-size: 18px;">
+		<li>GRAFF NESTL & PARTNER Rechtsanwälte GmbH & Co KG</li>
+		<li>Dr. Christoph Völk, MJur</li>
+		<li>Kerschbaumer Rechtsanwalts KG</li>
+		<li>Mag. Patrizia Raja</li>
+		<li>Mag. Thomas Blecha</li>
+	</ul>
+
+</div>
+
+{# <div class="row flex-row">
         {% for lawyer in lawyers %}
         <div class="col-xs-6 col-sm-2 fs-13 b-right">
         	{% if lawyer.photo %}
@@ -40,11 +56,7 @@ localeUrl[sk] = "/advokati-a-pravni-spolupracovnici"
         	<hr>
         	<p>
         		<b>{{ 'Kooperationspartner in Österreich'|_ }}</b> <br>
-                {{ 'Rechtsanwalt'|_ }} <br>
-                {{ 'Mag. Alexander Stimmler <br>
-                Kärntner Ring 4 <br>
-                A-1010 Wien'|_ }} <br>
-                <br>
+                
 				{{ 'Rechtsanwalt'|_ }} <br>
 				{{ 'Mag. Ernst Ehringfeld <br>
 				Hauptplatz 20 <br>
@@ -53,6 +65,7 @@ localeUrl[sk] = "/advokati-a-pravni-spolupracovnici"
 
 			<p>
 				<b>{{ 'Kooperationspartner in Italien'|_ }}</b> <br>
+
 				{{ 'Rechtsanwältin'|_ }} <br>
 				{{ 'Mag. Patrizia Raja <br>
 				I-20123 Milano'|_ }}
@@ -60,6 +73,7 @@ localeUrl[sk] = "/advokati-a-pravni-spolupracovnici"
 
 			<p>
 				<b>{{ 'Kooperationspartner in Kroatien'|_ }}</b> <br>
+
 				{{ 'Rechtsanwältin'|_ }} <br>
 				{{ 'Sandra Budimir LL.M. <br>
 				Petrinjska 32a <br>
@@ -67,4 +81,4 @@ localeUrl[sk] = "/advokati-a-pravni-spolupracovnici"
 			</p>
         	
         </div>
-</div>
+</div> #}
